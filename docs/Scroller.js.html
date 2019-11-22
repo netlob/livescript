@@ -1,10 +1,37 @@
-/**
- * @class
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Scroller.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Scroller.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @class Scroll
  * @classdesc This class handles all the scolling to - and algoritms to scroll to - any highlighted piece of script, saved in the database
  */
 class Scroll {
     /**
-     * @private
      * @description Contains some handy variabled :)
      */
     constructor() {
@@ -20,13 +47,13 @@ class Scroll {
     async scrollTo() {
         if (location.hash == "#embed" || $(this).text() == "") return
         var elems_after = [$(this).attr("id")]
-        for (var i = 1; i < 100; i++) {
+        for (var i = 1; i &lt; 100; i++) {
             if ($(`#${(elems_after[i-1])}`).next().hasClass("c5") || $(`#${(elems_after[i-1])}`).next().hasClass("c3")) break
             elems_after.push($(`#${(elems_after[i-1])}`).next().attr("id"))
         }
         elems_after = elems_after.splice(1, 1)
         var elems_before = [$(this).attr("id")]
-        for (var i = 1; i < 100; i++) {
+        for (var i = 1; i &lt; 100; i++) {
             if ($(`#${(elems_before[i-1])}`).prev().hasClass("c5") || $(`#${(elems_before[i-1])}`).prev().hasClass("c3")) break
             elems_before.push($(`#${(elems_before[i-1])}`).prev().attr("id"))
         }
@@ -70,7 +97,7 @@ class Scroll {
      * @description This function is executed by the scroll function and moves the purple bar to the current selected lines.
      */
     assignSelector = async () => {
-        if (location.hash == "#mobile" || $(window).width() < 900) $("body").attr("mobile", "true")
+        if (location.hash == "#mobile" || $(window).width() &lt; 900) $("body").attr("mobile", "true")
         else $("body").attr("mobile", "false")
         var height = 0
         this.elems.forEach(elem => height += $(`#${elem}`).height())
@@ -85,7 +112,7 @@ class Scroll {
     onKeydown = async (e) => {
         if ([37, 38].includes(e.which)) {
             e.preventDefault();
-            for (var id = parseInt(this.elems[this.elems.length - 1]) - 1; id < parseInt(this.elems[this.elems.length - 1]) + 100; id--) {
+            for (var id = parseInt(this.elems[this.elems.length - 1]) - 1; id &lt; parseInt(this.elems[this.elems.length - 1]) + 100; id--) {
                 if ($(`#${id}`).text() != "") {
                     $(`#${id}`).click()
                     break
@@ -93,7 +120,7 @@ class Scroll {
             }
         } else if ([32, 39, 40].includes(e.which)) {
             e.preventDefault();
-            for (var id = parseInt(this.elems[0]) + 1; id < parseInt(this.elems[0]) + 100; id++) {
+            for (var id = parseInt(this.elems[0]) + 1; id &lt; parseInt(this.elems[0]) + 100; id++) {
                 if ($(`#${id}`).text() != "") {
                     $(`#${id}`).click()
                     break
@@ -103,12 +130,12 @@ class Scroll {
     }
 
     /**
-     * @description This function is executed when the scroll event is fired on the document. It will check which scene is currently visable in the window and set the scrollspy & little thinghy in the up-left corner to the current scene
+     * @description This function is executed when the scroll event is fired on the document. It will check which scene is currently visable in the window and set the scrollspy &amp; little thinghy in the up-left corner to the current scene
      */
     onScroll = async () => {
         if (this.elems.length == 0) return
         // var y = (($(`#${elems[0]}`).offset().top - this.topMargin) - $(window).scrollTop())
-        // if ((y < -30 || y > 30)) $(".fixed-action-btn").show()
+        // if ((y &lt; -30 || y > 30)) $(".fixed-action-btn").show()
         // else $(".fixed-action-btn").hide()
         var elScrolledBy = [],
             currentSceneText = 'scene 1'
@@ -136,9 +163,31 @@ const filter_array = async (test_array) => {
         arr_length = test_array ? test_array.length : 0,
         resIndex = -1,
         result = [];
-    while (++index < arr_length) {
+    while (++index &lt; arr_length) {
         var value = test_array[index]
         if (value) result[++resIndex] = value
     }
     return result;
-}
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Scroll.html">Scroll</a></li></ul><h3>Global</h3><ul><li><a href="global.html#login">login</a></li><li><a href="global.html#toggleConfetti">toggleConfetti</a></li><li><a href="global.html#toggleTheme">toggleTheme</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Fri Nov 22 2019 17:16:56 GMT+0100 (CET)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

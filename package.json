@@ -1,0 +1,23 @@
+{
+  "name": "livescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jsdoc": "^3.6.3"
+  },
+  "scripts": {
+    "docs": "./node_modules/.bin/jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Netlob/livescript.git"
+  },
+  "author": "Netlob",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Netlob/livescript/issues"
+  },
+  "homepage": "https://github.com/Netlob/livescript#readme"
+}
