@@ -1,0 +1,3329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/materialize.min.css">
+	<title>Script - Lentefeest</title>
+	<!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png"> -->
+</head>
+
+<body>
+	<div class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper purple darken-4">
+				<span id="currentScene" class="left white-text">
+					Scene: <span></span>
+				</span>
+				<a class="brand-logo center">Live Script</a>
+				<ul id="nav-mobile" class="right">
+					<li class="show-on-medium-and-up"><a onclick="login()"><i
+								class="material-icons white-text">account_circle</i></a>
+					</li>
+					<li><a onclick="toggleTheme()"><i class="material-icons white-text">lightbulb_outline</i></a>
+					</li>
+					<li class="show-on-large"><a href="../music"><i class="material-icons white-text">music_note</i></a>
+					</li>
+					<li class="show-on-large"><a href="../"><i class="material-icons white-text">tv</i></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="col hide-on-small-only m3 l2" id="scrollspy">
+		<ul class="section table-of-contents">
+
+		</ul>
+	</div>
+	<div class="indicator"></div>
+	<div class="fixed-action-btn">
+		<a class="btn-floating btn-large purple darken-4">
+			<i class="large material-icons">arrow_upward</i>
+		</a>
+	</div>
+
+	<div id="overlay">
+		<div class="progress transparent">
+			<div class="indeterminate purple darken-3"></div>
+		</div>
+	</div>
+
+	<div class="c24">
+		<p class="c1"><span class="c12 c19 c13">Start voorstelling. Zaallicht dooft</span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 scrollspy"><span class="c26 c18">scene 1</span></p>
+		<p class="c1 c5"><span class="c26 c18"></span></p>
+		<p class="c1"><span class="c11">Rechts 1 tafel met drie stoelen. Midden een tafel met een bingo set.
+				Links
+				een
+				sta
+				tafel met geld kistje.</span></p>
+		<p class="c1 c5"><span class="c26 c18"></span></p>
+		<p class="c1"><span class="c18">Personages:</span></p>
+		<p class="c1"><span class="c0">Betty, Heinrich, Cor, Corrie, Gerard, Theodora, Joop, Janneke, Saskia,
+				Donny,
+				Pip,
+				Winston, Bianca, Danielle, Diederick, Fabrizio, &ndash; Jan, Assistent.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c12 c13">Er klinkt een </span><span class="c12 c13 c29">M 1luide ringtoon van
+				een
+				oude
+				Nokia.</span><span class="c0">&nbsp;</span></p>
+		<p class="c1"><span class="c9">Joop </span><span class="c12 c13">begint meteen druk te zoeken naar zijn
+				telefoon.
+			</span><span class="c9">Theodora </span><span class="c12 c13">opent haar tasje en bekijkt haar
+				oude
+				telefoon,
+			</span><span class="c9">Heinz </span><span class="c12 c13">&nbsp;is direct allert.. kortom: alle
+				personages
+				reageren op hun eigen manier op de ringtoon., behalve </span><span class="c9">Cor</span><span
+				class="c0">.
+				Die leest rustig verder.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Gerard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Cor! Cor!.. COR!!</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Cor doet zijn gehoorapparaat in.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Cor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Wat?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Gerard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Je telefoon..</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Cor haalt een oud telefoontje uit zijn zak, doet zijn bril op, bekijkt
+				hem op
+				een
+				afstandje en zoekt de opneem knop.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c12 c29 c13">Ringtoon stopt</span></p>
+		<p class="c1 c14 c5"><span class="c8"></span></p>
+		<p class="c1 c14"><span
+				class="c8">Corrie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">Hoezo word jij gebeld? Wie belt jou nou? Cor? Moet je me wat vertellen?
+				Ongehoord!
+				Dat jij nu gewoon hier gebeld wordt. Cor? Wie is dat?</span><span
+				class="c8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c18">Cor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c12 c13">luid</span><span class="c7">. </span></p>
+		<p class="c1"><span class="c7">Met Cor van Dalen. </span></p>
+		<p class="c1"><span class="c0">bekijkt zijn telefoon aan alle kanten. </span></p>
+		<p class="c1"><span class="c7">Met Cor va.... Zeker opgehangen.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Corrie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Omdat ik in de buurt was zeker... is het haar? Die..die...</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Heinz komt aan gelopen met een bordje dat aangeeft dat er niet
+				getelefoneerd
+				mag
+				worden.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Heinz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Ist das nicht klar? Niet bellen. En al helemaal niet met die, mit diesem
+				bl&ouml;den
+				Klingelton..</span></p>
+		<p class="c1"><span class="c0">Heinz gaat weer naar de Bingo</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Cor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Ja.. ja..</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Corrie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Het zal niet meer gebeuren! Cor.. zeg maar tegen je.. je.. je... bijvrouw
+				dat
+				als
+				ze
+				je wil spreken, dat ze dan eerst langs mij zal moeten.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Joop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Juist! dank Heinz voor het toespreken. </span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Heinz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Bingo!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Betty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Ohh Heinz, wat ben je toch goed in dit spel! Je bent zo slim!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Heinz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">De eerste keer dat ik bingo speelde was ik bij het verzet, nou en toen..
+				Ich
+				habe
+				eine Waffe in meinen H&auml;nde , maar ik was niet bang. Natuurlijk was ik niet bang.
+			</span></p>
+		<p class="c1"><span class="c0">(gaat verder tegen Betty maar dan stil)</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Ondertussen is het Cor gelukt om iets lekkers te pakken te krijgen. Hij
+				eet
+				dit
+				zo
+				subtiel mogelijk op..</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Corrie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c18">&nbsp;</span><span class="c7">Cor waarom doe je dat nou weer? Jeetje
+				mineetje,
+				niet
+				zo irritant doen, ik ben al 50 jaar met je getrouwd en je weet dat ik niet tegen
+				smakgeluiden kan,
+				ik
+				haat
+				het! Door jou heb ik Bingo verloren! </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Cor
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Je deed niet eens mee met Bingo.</span></p>
+		<p class="c1 c21 c5"><span class="c8"></span></p>
+		<p class="c1 c21"><span class="c8">Corrie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1 c21"><span class="c18">&nbsp;</span><span class="c7">Houd je mond. </span></p>
+		<p class="c1 c21"><span class="c12 c13">(cor haalt zijn schouders op en eet verder)</span><span
+				class="c7">&nbsp;</span></p>
+		<p class="c1"><span class="c7">Ga je weer! We gaan een afspraak regelen bij de tandarts, want dat
+				klapperen
+				van
+				je
+				kunstgebit en al die vieze smakken maakt me helemaal gek. Wees gewoon stil!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Cor kijkt boos naar zijn vrouw en gromt</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span
+				class="c8">Cor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Als je last hebt van mijn gesmak zet je toch je gehoorapparaat
+				uit.</span>
+		</p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Iedereen schrikt van het feit dat Cor hardop tegen Corrie in ging. Er
+				valt
+				een
+				stilte.</span></p>
+		<p class="c1"><span class="c0">Gerard begint hardop te lachen en slaat Cor bemoedigend op zijn
+				schouder.</span>
+		</p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c18">Corrie</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Hoe durf je!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c8">Theodora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+		<p class="c1"><span class="c7">Corrie even niet zo chagrijnig doen, het is net zo gezellig! Ruzie is
+				nergens
+				de
+				oplossing voor. En trouwens, jullie zijn al 50 jaar met elkaar getrouwd en dan moet je
+				wel tegen een
+				beetje
+				gesmak kunnen. </span></p>
+		<p class="c1"><span class="c12 c13">Corrie zucht.</span></p>
+		<p class="c1"><span class="c12">Ik heb deze verrukkelijke, brownies gemaakt. Wil iemand nog een
+				stukje?</span><span class="c0">&nbsp;</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Gerard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c12 c13">Met volle mond</span></p>
+		<p class="c1"><span class="c7">Nou Theodora, doe mij maar... &eacute;&eacute;n stukje dan, een
+				kleintje....
+				Moet
+				wel
+				op de lijn letten natuurlijk. &nbsp;</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18">Theodora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c0">lief</span></p>
+		<p class="c1"><span class="c7">Je hebt al drie stukjes op, Gerard. Anders gaat je bloedsuiker weer raar
+				doen,
+				h&egrave;?</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Gerard kijkt boos, wacht tot Theodora de andere kant op kijkt en pakt
+				toch
+				nog
+				een
+				stukje van de schaal, en stopt een tweede in zijn zak.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span
+				class="c18">Heinz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c12 c13">Pakt een stukje van de schaal</span><span class="c8">&nbsp;</span></p>
+		<p class="c1"><span class="c7">&hellip; en later ook bij de NSB und dann gingen wir zum, maar ik was
+				niet
+				bang,
+				Ich
+				hatte keine Angst</span></p>
+		<p class="c1 c21 c5"><span class="c8"></span></p>
+		<p class="c1 c21"><span class="c8">Betty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c12">Wat ben je toch een pareltje</span><span class="c18">&nbsp;</span><span
+				class="c12">Heinz. Zo dapper.</span></p>
+		<p class="c1 c21 c5"><span class="c8"></span></p>
+		<p class="c1 c21"><span class="c18">Janneke</span><span
+				class="c12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">Dromerig
+			</span>
+		</p>
+		<p class="c1"><span class="c7">Ach mijn kindje. Heb je honger. Kom maar bij mama!</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c12 c13">Joop gaat naar het midden van de ruimte en kucht wat om de aandacht
+				te
+				krijgen.
+				De anderen maken elkaar alert op het feit dat Joop iets gaat zeggen.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Joop
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Luitjes, ik wil dit moment pakken, als voorzitter van deze vereniging, om
+				te
+				zeggen
+				dat ik trots ben op jullie! Trots op onze vriendschap en trots op het feit dat we hier
+				al 40 jaar
+				samen
+				komen. Al 40 jaar clubhuis de ooievaar. </span></p>
+		<p class="c1"><span class="c7">Morgen is het weer tijd voor onze jaarlijkse...</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Er klinkt een hoop rumoer vanuit de coulisse. Iedereen is meteen
+				afgeleid.
+				Lachend en
+				hard pratend komt de groep studenten binnen, met de assistent van de burgemeester achter
+				hen
+				aan.</span>
+		</p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c9">Saskia </span><span class="c12 c13">loopt voorop, geeft de beduusde Joop
+				een
+				snelle
+				hand en begint meteen druk de ruimte te bestuderen en schrijft van alles op.
+			</span><span class="c9">Fabrizio </span><span class="c0">loopt direct naast haar en neemt met
+				een meetlint hier
+				en
+				daar
+				wat maten op.</span></p>
+		<p class="c1"><span class="c9">Diederick-Jan </span><span class="c12 c13">ploft op een lege stoel neer,
+				legt
+				zijn
+				voeten op tafel en zijn handen achter zijn hoofd. </span><span class="c9">Betty</span><span
+				class="c0">&nbsp;zweeft direct naar hem toen begint tegen
+				hem aan te brabbelen.</span></p>
+		<p class="c1"><span class="c9">Pip</span><span class="c12 c13">&nbsp;kijkt zorgelijk om zich heen. Haalt
+				een
+				kopje
+				koffie uit het automaat en spuugt dit direct terug in het kopje. begint hierover te
+				mopperen en zet
+				het
+				kopje op de tafel bij Gerard. </span><span class="c9">Gerard </span><span class="c0">neemt er zonder
+				nadenken een slok van.</span></p>
+		<p class="c1"><span class="c9">Winston </span><span class="c0">zoekt gelijk in allerlei kastjes naar de
+				drank,
+				vindt
+				niet gelijk iets, en gaat uiteindelijk bij D-J zitten.</span></p>
+		<p class="c1"><span class="c9">Donny</span><span class="c12 c13">&nbsp;en </span><span class="c9">Bianca
+			</span><span class="c0">gaan meteen foto&#39;s van zichzelf maken. Met en zonder de
+				ouderen.</span></p>
+		<p class="c1"><span class="c9">Joop </span><span class="c0">is in eerste instantie met stomheid
+				geslagen.
+				Als
+				tot
+				hem doordringt wat er gebeurt probeert hij eerst iedereen weg te krijgen. Als dat niet
+				lukt, loopt
+				hij
+				een
+				tijdje achter Saskia aan.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Joop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Pardon.. Mevrouw, pardon..? Hallo, jongedame.. ik.. jongedame... dame..
+				Meisje...?</span></p>
+		<p class="c1"><span class="c0">Saskia draait zich geirriteerd om.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Saskia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Meisje??</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Joop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">Mevrouw...? Wat komt u met uw uh....</span><span class="c12 c13">kijkt
+				om
+				zich
+				heen... </span><span class="c7">gezelschap hier doen?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Saskia</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Pardon, ik dacht dat ik u gemaild had?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18">Joop</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Gemaild?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span
+				class="c8">Saskia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Gemaild!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Joop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Theodora..? Gemaild?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Theodora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Is dat niet.. dat..</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Fabrizio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c12">Dat is een brief via internet meneer.</span><span
+				class="c18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c7">&nbsp;</span>
+		</p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Betty
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Oh....Jaa! Dat is met het internet daten.. Tinder enzo..</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Joop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Internet...? </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Saskia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">Ooooh, dat verklaar het. </span><span class="c0">Ze geeft Joop een
+				hand.</span>
+		</p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Joop
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">Joop Westerman.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Saskia</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Ik ben Saskia-Jane den Hertog voorzitter van studentenvereniging.</span>
+		</p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Joop
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">Joop </span><span class="c12 c13">Johannes</span><span
+				class="c7">&nbsp;Westerman,
+				voorzitter van de ouderenvereniging.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Saskia stelt Joop aan alle leden voor. Als laatste D-J</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">D-J&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">Diederick-Jan van Waerdenburgh de Parme Tuto-duar&eacute;</span><span
+				class="c8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18">Joop </span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">Joop Johannes</span><span class="c12 c13">&nbsp;Lodewijck, met ck,
+			</span><span class="c7">Westerman.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Fabrizio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c12">Prettig kennis te maken, meneer Westerman</span><span class="c8">.</span>
+		</p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Joop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Met C-K..</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Saskia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Met C...? Juist.. Volgens de laatste berichtgeving. Statuut 4.5 regel 9
+				punt
+				7..</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18">Fabrizio</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Volgens de verdeling van de burgemeester hadden wij vandaag de grote zaal
+				van
+				de
+				Ooievaar voor onszelf.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Gerard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Om de donder niet...niet! Wij zitten hier altijd!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Bianca&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">O M G, dan zitten we verkeerd man.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Joop
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Dat denk ik ook, U kunt weer gaan, prettige dag ve..</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Dani&euml;lle </span></p>
+		<p class="c1"><span class="c7">Nee, nee, nee, dat kan niet, want ik heb dit heel lang gepland en de
+				burgemeester
+				zei
+				echt dat we &ldquo;Clubhuis de Ooievaar&rdquo; vandaag mochten hebben, en dit is toch
+				echt de
+				Ooie-</span>
+		</p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Winston &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c12 c13">Half-dronken </span><span class="c7">Dani&euml;lle, Chill. Geen
+				paniek,
+				rustig
+				aan.. Hier? Shotje?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Saskia </span><span class="c12">(</span><span class="c12 c13">verheft
+				haar
+				stem)</span></p>
+		<p class="c1"><span class="c7">Winston, het is drie uur &lsquo;s middags!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Heinz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Ze komen ons aanvallen! Dit is een val! Deckung finden!</span></p>
+		<p class="c1"><span
+				class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12 c13">Hij duikt weg achter Corrie. Winston duikt met hem mee...</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span
+				class="c8">Saskia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Dani&euml;lle heeft gelijk, wij hebben echt de Ooievaar.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span
+				class="c8">Pip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">2 woorden 9 letters....</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Joop
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Wij, van de ouderenvereniging, weigeren om weg te gaan! </span></p>
+		<p class="c1 c5 c30"><span class="c0"></span></p>
+		<p class="c1 c30"><span class="c0">Alle ouderen willen zich achter Joop scharen, sommige zijn niet op
+				tijd.</span>
+		</p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Assistent &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Meneer..., volgens de burgemeester moet de ouderenvereniging het Clubhuis
+				delen
+				met
+				de studenten. Het is niet anders.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">D-J&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Het is niet anders, meneertje..</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Betty</span></p>
+		<p class="c1"><span class="c7">Wat een beleefde jongeman ben jij&hellip; </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Joop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">Meneertje? Ik ben Joop Johannes </span><span class="c12 c13">Antoine
+			</span><span class="c12">Lodewijck, met ck</span><span class="c12 c13">, </span><span class="c12">Westerman
+				voorzitter
+				van....</span><span class="c18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c7">&nbsp;</span></p>
+		<p class="c1"><span class="c7">Oooh ik heb jullie door... U denkt die oudjes... Nou wij kunnen dan wel
+				oud
+				zijn,
+				maar we zijn zeker niet dom. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">En een nep assistent inhuren om ons weg te sturen. </span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Heinz</span></p>
+		<p class="c1"><span class="c7">Jullie hebben allemaal een onvoldoende!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Joop</span></p>
+		<p class="c1"><span class="c7">Nou, mij heb je niet te pakken hoor..., stelletje.... stelletje...
+				snotneuzen!</span>
+		</p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Donny</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Noemt hij ons nou. .snotneuzen? </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Saskia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Meneer Westerman...</span></p>
+		<p class="c1"><span class="c18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">probeert
+				kalm te klinken.. </span></p>
+		<p class="c1"><span class="c7">Wij zijn geen snotneuzen we hebben gewoon recht op een plek voor ons zelf
+				en
+				het
+				maakt niet uit wat u en uw... clubje.. daar van vindt. </span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c12 c13">Joop staat op het punt heel erg boos te worden..</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c18">Theodora</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Joop..., Joop!! Rustig aan. we lopen gezamenlijk naar het gemeentehuis ik
+				neem
+				mijn
+				koekjes mee en alles komt goed. Het is vast een misverstand. We gaan het
+				oplossen!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Fabrizo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Precies, we gaan dit samen oplossen!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Pip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">ooooh...</span><span class="c18">&nbsp;</span><span class="c7">&nbsp;dan
+				moet ik
+				weer lopen&hellip;?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Donny&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Kom op, Pip is goed voor je.. denk aan die 10.000 stappen.. Foto??</span>
+		</p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Gerard</span></p>
+		<p class="c1"><span class="c7">Tienduizend stappen??</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Heinz</span></p>
+		<p class="c1"><span class="c12">Keine Ahnung, majoor. </span><span class="c0">(iedereen loopt af)</span>
+		</p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c18 c19">Black out</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c11">Alle spullen af.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18 c19">Licht zang 1.</span></p>
+		<p class="c1"><span class="c0">Zanger(es) op.</span></p>
+		<p class="c1"><span class="c18 c29">Muziek Zang 1</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c22 scrollspy"><span class="c26 c18">Scene 2</span></p>
+		<p class="c1"><span class="c0">Betty, Heinrich, Cor, Corrie, Gerard, Theodora, Joop, Janneke, Hanneke
+				Saskia,
+				Donny,
+				Pip, Fabrizio, Winston, Bianca, Danielle, Diederick &ndash; Jan, Assistent, Caroline
+				Stroer,
+				Wethouder
+				de
+				boer.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c11">Bureau midden, met bureau stoel.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18 c19">Burgemeester staat klaar. Licht scene 2.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">De burgemeester staat bij haar bureau..</span></p>
+		<p class="c1"><span class="c0">De assistent komt binnen.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c23"><span class="c8">Assistent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1 c23"><span class="c7">Mevrouw?? Mevrouw..? Pardon..? Mevrouw Stroer..? </span></p>
+		<p class="c1 c23"><span class="c0">Burgemeester Stroer schrikt op en duwt gauw al haar speelgoed in een
+				doos&rsquo;.</span></p>
+		<p class="c1 c23 c5"><span class="c0"></span></p>
+		<p class="c1 c23"><span class="c18">Caroline Stroer </span><span class="c0">ge&iuml;rriteerd </span></p>
+		<p class="c1 c23"><span class="c7">Wat is er?</span></p>
+		<p class="c1 c23 c5"><span class="c0"></span></p>
+		<p class="c1 c23"><span class="c8">Assistent</span></p>
+		<p class="c1"><span class="c7">De leden van... kijk... het zit zo.. er is een conflict en de huurders
+				van
+				Clubhuis
+				de Ooievaar zijn hier.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c23"><span class="c8">Caroline Stroer
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1 c23"><span class="c7">Ach.. daar heb Ik toch helemaal geen tijd voor. Stuur ze weg.
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1 c23"><span class="c7">En haal een Latte Machiato met magere melk en twee shotjes suiker
+				vrije
+				caramel
+				alsjeblieft! </span></p>
+		<p class="c1 c23"><span class="c0">De Assistent zet de koffie meteen op tafel.</span></p>
+		<p class="c1 c23 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Assistent
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Eigenlijk heeft u wel tijd mevrouw..</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Caroline Stroer</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c12 c13">Neemt een slok... </span><span class="c7">Is dit een skinny? </span>
+		</p>
+		<p class="c1 c21 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Assistent
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">De planning is leeg. Ik laat ze..... </span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c12 c13">De studenten en de ouderen komen wat agressief binnen. Behalve
+				Theodora,
+				die
+				loopt rustig rond met koekjes/ander gebakken voedsel</span><span class="c7">&nbsp;binnen.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Caroline Stroer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">(</span><span class="c12 c13">met tegenzin</span><span class="c7">)
+				Goed.
+			</span>
+		</p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c0">Joop wil Caroline een hand geven, zij kijkt hem arrogant aan.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span
+				class="c8">Joop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">Ik ben Joop</span><span class="c18">&nbsp;</span><span class="c12">Johannes,
+			</span><span class="c12 c13">Willem,</span><span class="c12">&nbsp;Antoine</span><span
+				class="c12 c13">&nbsp;</span><span class="c7">Lodewijck, met ck, Westerman van de
+				ouderenvereniging.</span>
+		</p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c23"><span
+				class="c8">Saskia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Mevrouw, de burgemeester, deze mensen weigeren te geloven dat ik van u
+				het
+				recht
+				heb
+				gekregen om ons in Clubhuis de Ooievaar te vestigen.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span
+				class="c8">Joop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Omdat wij ons nu al 40 jaar in de Ooievaar hebben gevestigd en deze elke
+				dag
+				bezoeken.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c23"><span class="c18">Caroline Stroer </span><span
+				class="c12 c13">verveeld&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1 c23"><span class="c7">Tjonge, wat vervelend voor jullie allemaal.</span></p>
+		<p class="c1"><span class="c7">Maar zij heeft gelijk, zij mogen het Clubhuis op de maandag, de dinsdag
+				en de
+				vrijdag. De rest van de week blijft van u. </span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Joop
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Maar op maandag hebben wij bingo! </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Gerard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Dat kan u niet van ons afnemen. </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Betty</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Heinz is er heel goed in!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Saskia
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Helaas.... Je hoort de burgemeester.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c18">Theodora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c0">Tegen Saskia. </span></p>
+		<p class="c1"><span class="c7">Wil jij misschien een koekje lieverd??</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c18">Gerard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c0">Pakt het koekje voor Saskia weg. </span></p>
+		<p class="c1"><span class="c12 c13">Met volle mond:</span><span class="c12">&nbsp;Het is gewoon jullie
+				schuld.
+				Als
+				de jeugd nou wat respect had voor ons ouderen hadden we dit probleem helemaal niet.
+			</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Heinz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Zoek een andere plek! Weggehen!!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Bianca&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Wij hebben wettelijk recht!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Gerard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</span></p>
+		<p class="c1"><span class="c7">Wij zitten hier al 40 jaar!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c12 c13">De discussie gaat door en iedereen schreeuwt door elkaar terwijl
+				Fabrizio en
+				Theodora proberen te sussen en inmiddels samen koekjes uit delen.</span><span
+				class="c12">&nbsp;</span><span class="c12 c13">De burgemeester wil er bovenuit komen
+				maar dat lukt
+				niet.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Assistent</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">STILTE!!!!</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Iedereen valt stil en kijkt beschaamd naar de punten van de schoenen. De
+				burgemeester
+				en Wethouder Blijleven kijkt verbaasd naar de assistent.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Bianca</span></p>
+		<p class="c1"><span class="c7">Hoe doe jij dat?</span></p>
+		<p class="c1 c23 c5"><span class="c8"></span></p>
+		<p class="c1 c23"><span class="c18">Assisten</span><span
+				class="c7">t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1 c23"><span class="c7">Wat?</span></p>
+		<p class="c1 c23"><span class="c12 c13">Haalt haar schouders op.</span></p>
+		<p class="c1 c23"><span class="c12">Ik heb een paar jaar in het onderwijs gewerkt. </span></p>
+		<p class="c1 c23 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Caroline Stroer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Juist. Ik heb hier geen tijd voor er zijn... dingen.. </span></p>
+		<p class="c1"><span class="c7">Jullie moeten het Clubhuis gaan delen, punt. </span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Wethouder de boer komt op gelopen, een beetje beschaamd.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Wethouder de Boer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Pardon, mevrouw de burgemeester?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Caroline Stroer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Wat nu weer!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Wethouder de Boer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Uw handtekening? Onder het parkeerbeleid voor het centrum?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Caroline Stroer </span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Ik heb een fantastisch idee.</span></p>
+		<p class="c1"><span class="c7">Om dit conflict op te lossen gaan jullie drie weken naar de camping van
+				Wethouder
+				de
+				Boer.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Wethouder de Boer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c18">&nbsp;</span><span class="c7">Wethouder de Boer?? Dat is.. dat ben
+				ik...</span>
+		</p>
+		<p class="c1"><span class="c12">&nbsp;(</span><span class="c0">probeert excuusjes te verzinnen) </span>
+		</p>
+		<p class="c1"><span class="c12">We hebben niet genoeg plekken, en uhh&hellip;mijn vrouw is hier niet op
+				voorbereid.
+				En het wordt hoogseizoen.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Caroline Stroer</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Geen gemaar, vanaf morgen wil ik ze op uw camping.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Betty
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Oh wat gezellig, kamperen! </span></p>
+		<p class="c1"><span class="c0">tegen D-J. </span></p>
+		<p class="c1"><span class="c7">Zal ik bij jou in de tent?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Donny&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Is daar ruimte om te sporten..?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Wethouder de Boer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Dit komt echt niet uit!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c12 c13">De ouderen en de studenten gaan in twee groepen staan, de
+				burgemeester,
+				assistent en wethouder midden achter. Focus op Oud.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Joop
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Jongens, dit gaat te ver. We gaan de barricade op. </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Gerard
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Gele hesjes uit de kast jongens!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Joop</span></p>
+		<p class="c1"><span class="c7">In protest richting Den Haag!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Allen
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Alles voor de Ooievaar!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Joop</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Dit is het plan...</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Ouderen fluisteren in een kringetje.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c12 c13">Focus op Studenten.</span></p>
+		<p class="c1"><span
+				class="c8"><br>Saskia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Dit gaat zomaar niet jongens. Ik zet het online..</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Winston</span></p>
+		<p class="c1"><span class="c7">Een petitie</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Bianca</span></p>
+		<p class="c1"><span class="c7">Crowdfunding</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Fabrizio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Een stille tocht?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Pip</span></p>
+		<p class="c1"><span class="c7">Een lawaai tocht!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Don</span></p>
+		<p class="c1"><span class="c7">We hebben al 50 duizend likes, dit gaat viral jongens!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Caroline Stroer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Als jullie nu zo vriendelijk zouden willen zijn om mijn kantoor te
+				verlaten,
+				ik
+				heb
+				het erg druk. Tijd is geld.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Joop</span></p>
+		<p class="c1"><span class="c7">Hier is het laatste woord nog niet over gesproken, als u dat maar
+				weet!</span>
+		</p>
+		<p class="c1"><span class="c0">Iedereen af. </span></p>
+		<p class="c1 c5"><span class="c8 c19"></span></p>
+		<p class="c1"><span class="c8 c19">Black out.</span></p>
+		<p class="c1 c5"><span class="c8 c19"></span></p>
+		<p class="c1 c5"><span class="c8 c19"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c5 c22"><span class="c26 c18"></span></p>
+		<p class="c22 c5"><span class="c26 c18"></span></p>
+		<p class="c1 c5"><span class="c26 c18"></span></p>
+		<p class="c1 c5"><span class="c26 c18"></span></p>
+		<p class="c22 scrollspy"><span class="c26 c18">Scene 3 Op de Camping</span></p>
+		<p class="c1"><span class="c8">Personages</span></p>
+		<p class="c1"><span class="c0">Wethouder de Boer, Marie de Boer, Gezinnen, Truus en Annie</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c11">Toiletdeuren en stoelen toiletdames klaarzetten</span><span class="c18">,
+			</span><span class="c11">Handdoeken kinderen klaar leggen naast toiletten.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c0">Annie en Truus op.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c18 c19">Licht Scene 3</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c0">De vaders; Karel en Hans rekken en strekken nog even na de lange auto
+				rit. De
+				moeders; Louise en Marit gaan op zoek naar het perfecte plekje. Rechts voor worden de
+				toilethuisje
+				op
+				gereden, Annie en Truus zitten er voor, of maken binnen schoon.</span></p>
+		<p class="c1"><span class="c0">De kinderen komen 1 voor 1 op. De een nog ge&iuml;rriteerder dan de
+				ander.</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Abbey</span></p>
+		<p class="c6"><span class="c7">Serieus?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Johnny</span></p>
+		<p class="c6"><span class="c7">Serieus??</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Shauny</span></p>
+		<p class="c6"><span class="c7">Serieus???</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Chloey</span></p>
+		<p class="c6"><span class="c7">Serieus???</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Karel</span></p>
+		<p class="c6"><span class="c7">Bloedserieus Kinderen! Heerlijk die rust, die reinheid en geen regelmaat!
+			</span><span class="c0">Hij slaat zijn arm om Johnny</span><span class="c7">. Wat gaan we hier
+				genieten.!!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Hans</span></p>
+		<p class="c6"><span class="c7">Absoluut Maatje. Moet je luisteren jongens..?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Stilte..</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Abbey</span></p>
+		<p class="c6"><span class="c7">Ja..??</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Hans en Karel</span></p>
+		<p class="c6"><span class="c7">SSSSST!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Stilte</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Shauny</span></p>
+		<p class="c6"><span class="c7">Wa&hellip;</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Hans en Karel</span></p>
+		<p class="c6"><span class="c7">SSSSST!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Chloey </span><span class="c0">Fluistert</span></p>
+		<p class="c6"><span class="c7">Wat moet ik horen?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Hans</span></p>
+		<p class="c6"><span class="c7">Niks, helemaal niks! Alleen vogeltjes en sprinkhanen..</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Shauny</span></p>
+		<p class="c6"><span class="c7">Pap! Serieus? Dit wordt serieus het niveau? </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Johnny</span></p>
+		<p class="c6"><span class="c7">Dit worden drie hele lange weken.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Karel</span></p>
+		<p class="c6"><span class="c7">Rust, Reinheid en geen regelmaat.. genieten. Neem van jullie ouwe ouders
+				aan,
+				het
+				wordt fantastisch!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">De kinderen hebben ondertussen hun mobiel gepakt en gaan op zoek naar
+				wifi.</span>
+		</p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Hans</span></p>
+		<p class="c6"><span class="c7">Maar eerst uitpakken! Helpen jullie mee jongens?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Karel</span></p>
+		<p class="c6"><span class="c7">Uiteraard Maat!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Abbey</span></p>
+		<p class="c6"><span class="c7">Vergeten jullie Opa niet?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Hans</span></p>
+		<p class="c6"><span class="c7">Opa?... Shit mijn vader&hellip;</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Karel en Hans lopen snel af. Kinderen zoeken door naar Wifi.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Johnny</span></p>
+		<p class="c6"><span class="c7">Ja!!.... Nee..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Abbey</span></p>
+		<p class="c6"><span class="c7">Nee&hellip; Nee.. </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Chloey</span></p>
+		<p class="c6"><span class="c7">jaaaaa&hellip;. Nee.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Shauny</span></p>
+		<p class="c6"><span class="c7">Serieus? Serieus?? What the&hellip;</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Johnny</span></p>
+		<p class="c6"><span class="c7">Ja!! Jaaa&hellip; Jaaaaaa, ik heb bereik!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Andere kinderen rennen naar Johnny met telefoon in gekke positie.</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Abbey</span></p>
+		<p class="c6"><span class="c7">Serieus! Yes!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Chloey</span></p>
+		<p class="c6"><span class="c7">Oke&hellip; het is iets, het is iets!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Louise en Marit rennen op de kinderen af.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Louise</span></p>
+		<p class="c6"><span class="c7">Hohohohoooo</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Marit</span></p>
+		<p class="c6"><span class="c7">Dat was niet de afspraak.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Ze pakken de telefoons af. Chloey geeft zich niet zo maar gewonnen en
+				vecht
+				met
+				Marit.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Louise</span></p>
+		<p class="c6"><span class="c7">Nee, geen gemaar! We zijn op vakantie voor onze rust. De mobiele wereld
+				draait
+				heus
+				wel door zonder jullie. Deze blijven bij mij, en op de terug weg gaan ze weer
+				aan.</span></p>
+		<p class="c6"><span class="c7">Marit? Lukt het?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Marit en Chloey nog steeds in gevecht om de telefoon.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Marit</span></p>
+		<p class="c6"><span class="c7">Zeker, alles onder controle&hellip; Geef!! nu!! hier!! Geef aan je
+				moeder,
+				nu!</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Louise pakt de telefoon van Chloey af.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Louise</span></p>
+		<p class="c6"><span class="c7">Zo!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Chloey</span></p>
+		<p class="c6"><span class="c7">Wat? Jij bent mijn moeder niet!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Louise</span></p>
+		<p class="c6"><span class="c7">Nee, maar wel de bewaarder van jouw telefoon. </span></p>
+		<p class="c6"><span class="c7">Dus ik zou maar heel lief zijn voor mij als ik jou was. </span></p>
+		<p class="c6"><span class="c0">Tegen Marit.</span></p>
+		<p class="c6"><span class="c7">Hier, de telefoon van je dochter.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Chloey </span><span class="c0">Kokend van woede</span></p>
+		<p class="c6"><span class="c7">Oooh ik zweer het je deze vakantie wordt zo ongelooflijk.. kut! Ik ga in
+				de
+				auto
+				zitten.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Abbey</span></p>
+		<p class="c6"><span class="c7">Ik ook</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Johnny </span><span class="c0">sleurt Shauny mee</span></p>
+		<p class="c6"><span class="c7">Ik ook</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Kinderen af.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Louise</span></p>
+		<p class="c6"><span class="c7">Ach de armoe&hellip; Het leven van achter een scherm</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Marit</span></p>
+		<p class="c6"><span class="c7">Toen wij opgroeiden kwam je tenminste nog is buiten.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Vaders terug op.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Karel</span></p>
+		<p class="c6"><span class="c7">Zo dames. Nu eerst een heerlijk&hellip;.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Marit</span></p>
+		<p class="c6"><span class="c7">Waar is je vader?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Hans</span></p>
+		<p class="c6"><span class="c7">Shit.. Mijn vader.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c0">Hans snelt af en komt terug met Opa in een rolstoel.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Hans</span></p>
+		<p class="c6"><span class="c7">Zo pa, dat was een reisje he.. Zin in een wel verdient&hellip;</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Karel</span></p>
+		<p class="c6"><span class="c7">Biertje!?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Opa</span></p>
+		<p class="c6"><span class="c0">Mompelt iets onverstaanbaars.</span></p>
+		<p class="c3"><span class="c20 c9"></span></p>
+		<p class="c6"><span class="c8">Louise</span></p>
+		<p class="c6"><span class="c7">MM Heerlijk!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Marit</span></p>
+		<p class="c6"><span class="c7">Rust!!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Stilte</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c1"><span class="c12 c13">Wethouder de Boer komt opgelopen. Zenuwachtig. Marie loopt achter
+				hem
+				aan
+				met
+				een </span><span class="c11">stoel</span><span class="c12 c13">&nbsp;en een groot stuk
+				brandende
+			</span><span class="c11">Salie</span><span class="c0">&nbsp;om alles te reinigen.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span
+				class="c8">Marie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Harrie? Harrie! Lieveling ga zitten! Alles komt goed.</span></p>
+		<p class="c1 c37"><span class="c18">Wethouder de Boer</span><span class="c7">&nbsp; </span></p>
+		<p class="c1"><span class="c7">Goed? Goed?? GOED????? HOE DAN??!!</span></p>
+		<p class="c1"><span class="c7">Straks staan ze hier, op onze camping met 8 bejaarden en 8 studenten. Dat
+				kan
+				toch
+				nooit goed gaan. Je zou ze moeten horen ruzi&euml;n, het is absurd! W</span></p>
+		<p class="c1"><span class="c7">at gaan de andere gasten denken? Wij raken straks onze klanten kwijt
+				Marie..
+				geloof
+				me..</span></p>
+		<p class="c1"><span
+				class="c8">Marie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Het leven gaat zoals het gaat.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Wethouder de Boer</span><span class="c7">&nbsp; </span></p>
+		<p class="c1"><span class="c7">Mevrouw de burgemeester, denkt alleen aan zichzelf!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Marie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">When life puts you in tough situations, don&#39;t say Why me! Say; Try
+				me!</span>
+		</p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Wethouder de Boer</span><span class="c7">&nbsp; </span></p>
+		<p class="c1"><span class="c7">Wat?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Marie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Laat de negatieve gedachten gaan, mm? laat ze varen.. los...</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Karel, Hans, Marit en Louise hebben alles gehoord. En zitten vol
+				verwarring
+				naar
+				ze
+				te staren. Louise en Hans lopen achter ze aan.</span></p>
+		<p class="c1"><span class="c0">Focus op Toiletblok, Wethouder en Marie komen daar ook aan.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span
+				class="c8">Annie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Nou deze ken weer door hoor. Je weet nie wat ze er op doen he.. maar als
+				het
+				er
+				naast
+				beland is het nooit goed, wat jij Truus?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Truus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Wat je me zegt Annie!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span
+				class="c8">Annie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Een hele goeie morreguh Marietje!..!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Marie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Dames! Alles weer fris vandaag?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Truus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Fris, als een hoentje net alles weer opgepoetst hoor.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Annie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Alsof je op een gouwe bril pist.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Marie wil het toilet in gaan om te reinigen met Salie. Truus houdt haar
+				tegen.</span>
+		</p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">Hoho, niet op mijn poepdoossie, Meissie.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Wethouder de Boer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">En wie mag dat weer oplossen? Ik? IK! Marie, dit is toch niet waarom ik
+				wethouder
+				ben
+				geworden.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c18">Marie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c0">Zit inmiddels in een ondefinieerbare bijzondere
+				&nbsp;positie.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c12">Voor iedere minuut dat je boos bent, verlies je een minuut van
+				blijdschap
+				Har..</span><span
+				class="c18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Het leven is wat je gebeurt terwijl je...</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Wethouder de Boer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Marie! Ik geloof niet dat je de ernst inziet van de&hellip;</span></p>
+		<p class="c1"><span class="c0">Hij ziet Truus, Annie, Louise en Hans, Marit en Karel en de
+				kinderen</span>
+		</p>
+		<p class="c1"><span class="c0">&nbsp;naar hem staren.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Stilte</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c18">Wethouder de Boer </span><span class="c0">Overdreven blij</span></p>
+		<p class="c1"><span class="c7">Gasten! Welkom! Marie, we hebben gasten! Welkom welkom op Camping
+				Namaste..
+				Waar
+				rust
+				en&hellip; rust&hellip;en..</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Wethouder de Boer</span></p>
+		<p class="c1"><span class="c7">Juist, juist! Daarvoor bent u bij ons op het juiste adres. Ik ben.. en
+				dit
+				is..
+				ik..
+				we&hellip; heeft..</span></p>
+		<p class="c1"><span class="c7">Mag&hellip; poeh.. Ha! Welkom, u bent&hellip; hier&hellip; nu..
+				natuurlijk&hellip;
+				ja! Ha&hellip;</span></p>
+		<p class="c1"><span class="c7">Gaat alles goed hier?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Louise&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Zegt u het maar.. Gaat alles goed? </span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Stilte</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c23"><span class="c18">Truus </span><span class="c0">Tegen de wethouder</span></p>
+		<p class="c1 c23"><span class="c7">Zeg&hellip;. Even een vraagje he.. </span></p>
+		<p class="c1 c23 c5"><span class="c7"></span></p>
+		<p class="c1 c23"><span class="c8">Annie</span></p>
+		<p class="c1 c23"><span class="c12">Over de rechter pot van de dames..,</span><span
+				class="c18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c7">het
+				wc papier is
+				op
+				ken
+				jij dat effe bijvullen schat. </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Truus</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Het vliegt er zo snel doorheen volgens mij weet men tegenwoordig niet
+				meer
+				hoe ze
+				normaal t toiletpapier moeten gebruiken </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Annie</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Proppen he, niet vouwen, daar gaat het mis.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Truus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+				class="c12 c13">Tegen de wethouder </span><span class="c7">&nbsp;</span></p>
+		<p class="c1"><span class="c12">Bent u een propper of een vouwer?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Wethouder de Boer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Pardon?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span
+				class="c8">Marie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Propper, dat laat de slechte energie&euml;n gaan.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Louise&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c1"><span class="c7">Dus als ik het goed begrijp meneer de Boer. Dan komen hier zo meteen twee
+				ruzi&euml;nde bendes naar toe?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">De kinderen beginnen druk te fluisteren en giechelen.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span
+				class="c8">Truus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Oh,oh...</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Annie</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c1"><span class="c7">Stront aan de knikker.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Wethouder de Boer</span></p>
+		<p class="c1"><span class="c7">nee, nee.. Geen bendes... </span></p>
+		<p class="c1"><span class="c7">Kijk, het zit zo. Een groep studenten en een groep ouderen komen..
+			</span>
+		</p>
+		<p class="c1"><span class="c7">Eigenlijk is het heel gezellig.. sfeervol.. ik denk dat we met zijn
+				allen...
+			</span>
+		</p>
+		<p class="c1"><span class="c7">UW RUST KOMT Niet in gevaar! Beloofd.!!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18 c19">Licht scene 4.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c26 c18"></span></p>
+		<p class="c22 scrollspy"><span class="c26 c18">Scene 4</span></p>
+		<p class="c1"><span class="c18">Personages; </span><span class="c0">Betty, Heinrich, Cor, Corrie,
+				Gerard,
+				Theodora,
+				Joop, Janneke, Hanneke Saskia, Donny, Pip, Winston, Bianca, Danielle, Diederick,
+				Fabrizio, &ndash;
+				Jan,
+				Wethouder de Boer, Marie</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c18 c29">M2. Start muziek eigen huis en tuin.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c12 c13">Met veel bombarie komen van rechts de studenten op, een kort moment
+				later
+				rijden
+				de bejaarden van links de </span><span class="c11">caravan</span><span class="c0">&nbsp;het terrein
+				op.
+				Ze
+				zitten elkaar in de weg, op afstand bestuurbare caravans rijden over tentjes en tenen
+				heen, er wordt
+				met
+				haringen gegooid.. Kortom Chaos!</span></p>
+		<p class="c1"><span class="c12 c13">De overige gasten, de toiletdames en de wethouder en zijn vrouw
+				staan er
+				beduusd
+				bij te kijken.</span></p>
+		<p class="c10 c5"><span class="c0"></span></p>
+		<p class="c10"><span class="c0">Joop en Saskia staan tegenover elkaar te Ruzi&euml;n. Wethouder staat
+				tussen
+				beide.</span></p>
+		<p class="c10"><span class="c18 c29">Stop muziek eigen huis en tuin.</span></p>
+		<p class="c6"><span class="c8">Wethouder de Boer</span></p>
+		<p class="c6"><span class="c7">Nu is het wel genoeg met het gekibbel. De groep van Joop Westerman krijgt
+				het
+				veld
+				dichtbij de jeu de bowl baan en de groep van Saskia kan dan het veld nemen naast het
+				zwembad.
+			</span>
+		</p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Danielle </span><span class="c0">Gestressd</span></p>
+		<p class="c10"><span class="c7">Ja, maar die kleine kinderen zijn s &#39;ochtends super vroeg wakker en
+				op
+				dat
+				tijdstip is ons feest net voorbij, dan maken beide groepen te veel herrie waardoor
+				niemand kan
+				slapen.
+				Het
+				is verstandiger om de oudjes daar neer te zetten, zij staan vast vroeg op. Om te gaan
+				aqua
+				joggen.</span>
+		</p>
+		<p class="c6"><span class="c8">Janneke </span><span class="c0">Tegen pop</span></p>
+		<p class="c10"><span class="c7">Oh wat leuk. Allemaal nieuwe vriendjes voor jou in het zwembad lieve
+				schatje!
+			</span></p>
+		<p class="c6"><span class="c8">Marie</span></p>
+		<p class="c6"><span class="c7">Niet zo stressen allemaal. Kom tot jezelf en vind je innerlijke tuin even
+				terug.
+			</span></p>
+		<p class="c6"><span class="c7">&nbsp;</span></p>
+		<p class="c27"><span class="c0">Ze pakt handen en gaat in meditatie houding zitten.</span><span
+				class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Laten we dit democratisch beslissen.. wie stemt voor..</span></p>
+		<p class="c27 c5"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Joop</span></p>
+		<p class="c6"><span class="c7">Tegen!</span></p>
+		<p class="c27 c5"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Uh pardon?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Joop</span></p>
+		<p class="c6"><span class="c7">Als u voor bent, dan ben ik tegen..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Saskia kijkt hem verbaasd aan.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Heinz</span></p>
+		<p class="c6"><span class="c7">Du musst de vijand auch nicht vertrouwen! </span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Theodora</span></p>
+		<p class="c6"><span class="c7">Nou jongens laten we proberen positief te denken. </span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Saskia zet uit protest de </span><span class="c8 c29">muziek Dance Monkey
+				Tones
+				&amp;
+				I</span><span class="c0 c29">;</span><span class="c0">&nbsp; heel hard aan. De studenten
+				negeren de
+				ouderen</span></p>
+		<p class="c6"><span class="c7">&nbsp;</span></p>
+		<p class="c6"><span class="c8">Wethouder de Boer</span></p>
+		<p class="c6"><span class="c7">Nou, nou, nou&hellip;.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c7">&nbsp;</span><span class="c0">Zet de </span><span class="c8 c29">muziek
+				Dance
+				Monkey
+				Tones &amp; I</span><span class="c0">&nbsp;uit.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c7">Denken jullie dat ik niks beters doen heb?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Gerard </span></p>
+		<p class="c6"><span class="c7">Die muziek doet pijn aan mijn oren. Hoe kunnen jullie daar nou naar
+				luisteren?</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Theodora</span><span class="c20 c9">&nbsp;</span><span class="c0">Sussend</span>
+		</p>
+		<p class="c6"><span class="c7">Ach Gerard, jij bent toch ook jong geweest.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Betty</span></p>
+		<p class="c6"><span class="c7">Nee, nee! We laten die jongeren toch niet de dienst uitmaken. We leren
+				die
+				snotapen
+				wel even hoe echte muziek klinkt. Toch meneer de Wethouder?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Wethouder de Boer</span></p>
+		<p class="c6"><span class="c7">Nou, nou geen reden om nu ruzie te gaan maken.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Betty</span></p>
+		<p class="c6"><span class="c7">Laat de jukebox maar komen, mijn knappe assistenten!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Gerard stapt uit zijn rolstoel, doet wat rek en strek oefeningen en
+				blijkt
+				opvallend
+				goed ter been. Hij slaat Cor en Heinz op de schouders. Ze verdwijnen achter de caravan.
+				Joop huppelt
+				snel
+				achter ze aan.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Joop</span></p>
+		<p class="c6"><span class="c7">Wacht op mij, wacht op mij!</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c0">De studenten staan er verbaasd naar te kijken.. Maar herpakken
+				zich.</span>
+		</p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Donny</span><span class="c7">&nbsp;</span></p>
+		<p class="c6"><span class="c7">Kom maar op, wij zijn toch niet bang voor jullie! Alsof jullie beter zijn
+				dan
+				onze
+				Lil&#39;Kleine, Boef en Bizzy. </span></p>
+		<p class="c6"><span class="c7">Waar willen jullie mee komen dan, Frans Bauer? De fanfare band? Een
+				strijkorkest
+				misschien?</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Betty: </span></p>
+		<p class="c6"><span class="c7">Nou jongen toch. Zo knap en toch zo dom&hellip; jij kent je achtergrond
+				ook
+				niet.</span></p>
+		<p class="c6"><span class="c7">Let maar op! </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Joop, Gerard, Heinz en Cor </span><span class="c20 c9 c15">(dansers</span><span
+				class="c0">) komen opgelopen en gaan klaar
+				staan.</span></p>
+		<p class="c6"><span class="c0">Betty, Janneke, Hanneke, Corrie en Theodora gaan snel richting de caravan
+				en
+				komen
+				terug als dansers.</span></p>
+		<p class="c6"><span class="c20 c9">Wissel acteurs en Dansers. </span><span class="c20 c9 c15">Acteurs
+				zorgen
+				voor
+				decor en Attributen</span></p>
+		<p class="c6"><span class="c8 c15">Caravan naar achter.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Joop rent terug op, om de rolstoel weg te halen.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Joop:</span></p>
+		<p class="c6"><span class="c7">Music maestro!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8 c19">Licht Dans I</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c0">Wethouder en Marie rennen af.</span></p>
+		<p class="c3"><span class="c8 c29"></span></p>
+		<p class="c6" id="h.gjdgxs"><span class="c8 c29">Dans I</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Applaus Dans I</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8 c19">Black out.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8 c15">Caravan naar voren, camping tafels op. Stoelen bejaarden op, pan +
+				lepel
+				op.
+			</span></p>
+		<p class="c3"><span class="c8 c15"></span></p>
+		<p class="c6"><span class="c8 c15">Bejaarden nemen zelf attributen mee op.</span></p>
+		<p class="c6"><span class="c8 c15">Studenten nemen zelf spullen mee.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8 c19">Licht scene 5</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c22 scrollspy"><span class="c26 c18">Scene 5</span></p>
+		<p class="c1"><span class="c18">Personages; </span><span class="c0">Betty, Heinrich, Cor, Corrie,
+				Gerard,
+				Theodora,
+				Joop, Janneke, Hanneke, Saskia, Donny, Pip, Winston, Bianca, Danielle, Diederick,
+				Fabrizio,
+				Diederick&ndash;
+				Jan</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Na de dans zitten beide groepen bij hun eigen &lsquo;kamp plaats&rsquo;.
+				De
+				bejaarden
+				duidelijk is top stemming, maar ook flink uitgeput. Iedereen zit bij te komen.</span>
+		</p>
+		<p class="c1"><span class="c0">Theodora en Betty staan te koken.</span></p>
+		<p class="c1"><span class="c0">De studenten zijn teleurgesteld. Maken elkaar verwijten. De gezichten
+				staan
+				op
+				onweer.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Donny</span></p>
+		<p class="c1"><span class="c7">Ik word helemaal lijp van die ouwe zeikerds</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Danielle</span></p>
+		<p class="c1"><span class="c7">Hoe lang duurt dit nog Sas? Hoe lang moeten we hier nog zitten met die
+				oudjes?</span>
+		</p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18">DJ </span><span class="c0">Probeert bereik te krijgen met zijn
+				telefoon</span>
+		</p>
+		<p class="c1"><span class="c7">Ik word helemaal gek. Weer geen wifi! </span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Fabrizio</span></p>
+		<p class="c1"><span class="c7">Jongens, we moeten het anders aan pakken denk ik. </span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Saskia</span></p>
+		<p class="c1"><span class="c7">Inderdaad! We moeten die graftakken harder aanpakken.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Fabrizio</span></p>
+		<p class="c1"><span class="c7">Ik dacht juist vriendelijker aanpakken.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Danielle</span></p>
+		<p class="c1"><span class="c7">Jongens, we moeten met een plan komen, strak georganiseerd. </span></p>
+		<p class="c1"><span class="c7">Ik heb een idee..</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Iedereen steekt de koppen bij elkaar en begint te fluisteren.</span></p>
+		<p class="c1"><span class="c0">Winston doet niet mee, zit half te slapen en schrikt dan op.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Winston </span><span class="c0">Zingend</span></p>
+		<p class="c1"><span class="c7">Nog eentje dan? Oke een kleintje, heel kleintje dan&hellip;</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Saskia</span></p>
+		<p class="c1"><span class="c7">Briljant, Daan! Ik kan niet anders zeggen, briljant!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Diederick-Jan</span></p>
+		<p class="c1"><span class="c7">Voila!! Ik voel ineens enorm de behoefte om mij van een enorme bolus te
+				ontlasten!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Donny</span></p>
+		<p class="c1"><span class="c7">We knallen de stoelgang vol open jongens.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Saskia</span></p>
+		<p class="c1"><span class="c7">Dit is hoe we het gaan doen. Bianca, Jij haalt het middel bij de
+				receptie.</span>
+		</p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Bianca loopt af.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Saskia</span></p>
+		<p class="c1"><span class="c0">Vertelt iedereen wat ze moeten doen.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c7">Is voor iedereen helder wat hij moet doen?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Fabrizio</span></p>
+		<p class="c1"><span class="c7">Kunnen we toch niet beter het gesprek aan gaan.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Winston </span></p>
+		<p class="c1"><span class="c7">Praten is voor mietjes.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Saskia</span></p>
+		<p class="c1"><span class="c7">We doen het als afgesproken!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Fabrizio</span></p>
+		<p class="c1"><span class="c7">Oke, oke, ik wil nog wel met klem vermelden. Dat ik hier niet 100% achter
+				sta..</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Iedereen staat op, om aan de slag te gaan. Ze geven elkaar enthousiast
+				high
+				vife&rsquo;s en klappen op de schouder. </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Winston</span></p>
+		<p class="c1"><span class="c7">Wat moet ik eigenlijk doen</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Saskia</span></p>
+		<p class="c1"><span class="c7">Uhm, blijf jij maar gewoon hier. En drink je bier! Het is heel belangrijk
+				dat
+				jij
+				hier blijft zitten. </span></p>
+		<p class="c1"><span class="c0">Wijst een plek aan.</span></p>
+		<p class="c1"><span class="c7">Precies hier.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Winston</span></p>
+		<p class="c1"><span class="c7">Oh dat kan ik! Sas, ik zal je niet teleurstellen!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Saskia</span></p>
+		<p class="c1"><span class="c7">Oke, daar gaan we!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18 c29">Start Muziek Whistle Stop.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">De studenten lopen richting de bejaarden en beginnen aan hun plan. Als
+				iedereen
+				afgeleid is, gooit Bianca snel het laxeermiddel in de pan.</span></p>
+		<p class="c1"><span class="c0">Een voor een lopen de studenten langzaam weer terug. De bejaarden kijken
+				ze
+				verbaasd
+				na.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Bianca</span></p>
+		<p class="c1"><span class="c7">DE GEIT IS GEMOLKEN!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18 c29">Stop muziek Whistle stop.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c11">De studenten gaan af. Nemen eigen spullen mee.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Betty</span></p>
+		<p class="c1"><span class="c7">Wat een biceps heeft die jongen he.. Oehoeh! En die andere die kuiten,
+				zag je
+				dat. Ik
+				houd wel van een man met kuiten hoor!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18">Gerard </span><span class="c0">mond nog vol spekjes</span></p>
+		<p class="c1"><span class="c7">Vroeger had ik ook zulke kuiten schat, prachtig waren ze.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Corrie</span></p>
+		<p class="c1"><span class="c7">Cor had vroeger een wasbordje, echt waar! Niet zo verbaasd kijken hij was
+				heel
+				erg
+				gespierd. Jaahaaa, alle vrouwen zaten achter hem aan en hij..</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Cor</span></p>
+		<p class="c1"><span class="c7">Helemaal niet ik was het dikste kind van de klas.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Corrie </span></p>
+		<p class="c1"><span class="c7">En hij koos mij! Maar ik was ook een slanke del hoor. Hoog blond en benen
+				tot
+				mijn
+				kruin.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Cor</span></p>
+		<p class="c1"><span class="c7">Vrouw, je was een halve meter met hakken aan. </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Theordora</span></p>
+		<p class="c1"><span class="c7">Nou genoeg jongens&hellip; Aan tafel!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18 c29">Start muziek Whistle stop.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Ze gaan om de tafel zitten en eten de soep van Theodora.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Na korte tijd springen ze &eacute;&eacute;n voor &eacute;&eacute;n op
+				snellen
+				zich
+				naar het toilet.. Er ontstaat chaos. Overal rennen bejaarden met samengeknepen billen,
+				sommige gaan
+				bij
+				de
+				plant staan. Rollators racen over t podium&hellip;</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c12 c29 c13">&nbsp;Stop muziek Whistle stop</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Joop</span></p>
+		<p class="c1"><span class="c7">Die verrekte studenten ook!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18 c19">Black out</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c11">Caravan naar achter. Camping tafels, campingfornuis, stoelen bejaarden
+				af.
+				Bejaarden
+				nemen zelf attributen mee af.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18 c19">Licht dans 2</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18 c29">Dans 2 </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c0">Applaus dans 2.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c18 c19">Black out.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c22 c5"><span class="c18 c39"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c22 scrollspy"><span class="c26 c18">Scene 6 Op de Camping</span></p>
+		<p class="c1"><span class="c8">Personages</span></p>
+		<p class="c1"><span class="c0">Wethouder de Boer, Marie de Boer, Gezinnen, Truus en Annie</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8 c15">Toilet deuren + schoonmaak spullen. badlakens. </span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c0">Annie en Truus op.</span></p>
+		<p class="c1 c5"><span class="c0 c19"></span></p>
+		<p class="c1"><span class="c18 c19">Licht Scene 6</span></p>
+		<p class="c1 c5"><span class="c7 c19"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Truus en Annie zijn in het toilet bezig, ze gooien doekjes uit de deur,
+				vloeken.
+				Huilen, maken een nieuw sopje en gaan weer terug naar binnen.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">&nbsp;&ldquo;Annie, houd jij mijn tassie even vast&rdquo;</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Kinderen van de gezinnen komen op.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">De wifi valt weg.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Johnny</span></p>
+		<p class="c6"><span class="c7">Serieus??</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Shauny</span></p>
+		<p class="c6"><span class="c7">Serieus???</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Chloey</span></p>
+		<p class="c6"><span class="c7">Serieus??? </span></p>
+		<p class="c6"><span class="c7">Serieus??????</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Johnny</span></p>
+		<p class="c1"><span class="c7">Weer geen wifi!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Abbey</span></p>
+		<p class="c1"><span class="c7">Ik probeer die foto te posten&hellip;</span></p>
+		<p class="c1"><span class="c7">Serieus? Waarom?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Ze lopen wat heen en weer op zoek naar nieuwe wifi.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Johnny</span></p>
+		<p class="c6"><span class="c7">Ja! Wifi!.... Nee, toch niet.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Abbey</span></p>
+		<p class="c6"><span class="c7">Nee, Nee.. </span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Johnny</span><span class="c0">Terug op de originele plek bij de
+				toiletten.</span>
+		</p>
+		<p class="c6"><span class="c7">Ja!! Jaaa&hellip; Jaaaaaa!!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Andere kinderen rennen naar Johnny met telefoon in gekke positie.</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Shauny</span></p>
+		<p class="c6"><span class="c7">Serieus! Yes!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Abbey</span></p>
+		<p class="c6"><span class="c7">Beet! 8, 9,&hellip;. 150, 230.. 3005 likes&hellip; in hoeveel
+				seconden?&hellip;</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Louise, Marit, Karel en Hans komen aan gelopen met WC Papier en Toilettas
+				in
+				de
+				hand.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Chloey</span></p>
+		<p class="c6"><span class="c7">Vijand in aantocht.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Ze pakt alle telefoons af.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Chloey</span></p>
+		<p class="c6"><span class="c7">Ik herhaal de vijand is in aantocht.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Chloey gooit de telefoons in een lege emmer van Truus en Annie. </span>
+		</p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Chloey </span><span class="c0">Tegen Annie en Truus</span></p>
+		<p class="c6"><span class="c7">Sssst!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Karel, Hans, Louise en Marit staan bij toiletten.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">Hebben jullie gisteren lekker bruine bonen en pruimen lopen
+				vreten?</span>
+		</p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">Ah, kinders! Hier zitten jullie.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Hans</span></p>
+		<p class="c1"><span class="c7">Moeten jullie niet lekker badmintonnen jongens?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Karel</span></p>
+		<p class="c1"><span class="c7">Of tafeltennis. Rond de tafel.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Hans</span></p>
+		<p class="c1"><span class="c7">Oh ja! Hahah Maatje, dat waren nog is tijden. Wij maakten iedereen in.
+				Weet
+				je
+				nog?</span></p>
+		<p class="c1"><span class="c0">Tegen Shauny</span></p>
+		<p class="c1"><span class="c7">Wat denk je er van? Wedstrijdje met je vader?</span></p>
+		<p class="c1"><span class="c0">Shauny gaat gauw ergens anders zitten.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Louise</span></p>
+		<p class="c1"><span class="c7">Wat doen jullie hier?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Chloey</span></p>
+		<p class="c1"><span class="c7">Wij zaten gewoon een beetje te zitten Mam.. Beetje hangen.. </span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Abbey</span></p>
+		<p class="c1"><span class="c7">He Pap, waar is Opa?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Hans</span></p>
+		<p class="c1"><span class="c7">Shit...</span></p>
+		<p class="c1"><span class="c0">Hans snelt af</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c18">Truus </span><span class="c0">tegen de andere ouders</span></p>
+		<p class="c1 c21"><span class="c7">Dus, jullie hebben chili con carne gegeten gisteren?</span></p>
+		<p class="c1 c21 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c8">Annie</span></p>
+		<p class="c1 c21"><span class="c7">Bruine bonen, pruimen, rauwe ui???</span></p>
+		<p class="c1 c21 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c8">Truus</span></p>
+		<p class="c1 c21"><span class="c7">Goed pittige kruiden geroerd?</span></p>
+		<p class="c1 c21 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c0">Hans komt terug op gesneld met Opa in de rolstoel.</span></p>
+		<p class="c1 c21 c5"><span class="c0"></span></p>
+		<p class="c1 c21"><span class="c8">Karel</span></p>
+		<p class="c1 c21"><span class="c7">Haha, dames. Wat denk je zelf. Dat gaat toch niet op de
+				barbeknoei!</span>
+		</p>
+		<p class="c1 c21 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c8">Hans</span></p>
+		<p class="c1 c21"><span class="c7">Hahaha, hij zei barbeknoei. Briljant toch! Dijenkletser toch
+				Pa?</span>
+		</p>
+		<p class="c1 c21 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c8">Opa</span></p>
+		<p class="c1 c21"><span class="c0">Mompelt iets onverstaanbaars.</span></p>
+		<p class="c1 c21 c5"><span class="c7"></span></p>
+		<p class="c28 c21"><span class="c8">Truus</span></p>
+		<p class="c28 c21"><span class="c7">Nou wie het was weet ik niet, maar er heeft iemand flink bruine
+				bonen
+				met
+				rauwe
+				ui gegeten.</span></p>
+		<p class="c28 c21 c5"><span class="c7"></span></p>
+		<p class="c28 c21"><span class="c8">Annie</span></p>
+		<p class="c28 c21"><span class="c7">Die potten zijn niet om aan te zien.</span></p>
+		<p class="c21 c5 c28"><span class="c8"></span></p>
+		<p class="c28 c21"><span class="c8">Truus</span></p>
+		<p class="c28 c21"><span class="c7">Moet je maar is kijken.</span></p>
+		<p class="c28 c21 c5"><span class="c7"></span></p>
+		<p class="c28 c21"><span class="c0">De ouders kijken om een hoekje en komen kokhalsend naar
+				buiten.</span>
+		</p>
+		<p class="c28 c21 c5"><span class="c0"></span></p>
+		<p class="c28 c21 c5"><span class="c0"></span></p>
+		<p class="c28 c21"><span class="c8">Abbey</span></p>
+		<p class="c28 c21"><span class="c7">Hebben jullie het niet gehoord?</span></p>
+		<p class="c28 c21 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c8">Johnny</span></p>
+		<p class="c1 c21"><span class="c7">De studenten hebben de bejaarden gisteren vergiftigd.</span></p>
+		<p class="c1 c21 c5"><span class="c0"></span></p>
+		<p class="c1 c21"><span class="c8">Marit</span></p>
+		<p class="c1 c21"><span class="c7">Wat?</span></p>
+		<p class="c1 c21 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c8">Karel</span></p>
+		<p class="c1 c21"><span class="c7">Die studentjes hebben die ouwe fossielen te grazen gehad?? </span>
+		</p>
+		<p class="c1 c21 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c8">Hans</span></p>
+		<p class="c1 c21"><span class="c7">Hahahah, hoor je dat Pa?</span></p>
+		<p class="c1 c21 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c8">Opa</span></p>
+		<p class="c1 c21"><span class="c0">Mompelt iets onverstaanbaars</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Louise</span></p>
+		<p class="c1"><span class="c7">Hoe weten jullie dit?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18">Chloey</span><span class="c12">&nbsp;</span><span class="c0">doet
+				duidelijk
+				Louise
+				na</span></p>
+		<p class="c1"><span class="c7">&lsquo;Als je niet de hele dag met je neus in een beeldscherm zit
+				verstopt
+				dan
+				zie je
+				nog eens iets van de wereld.&rsquo; </span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">En wie kennen dat weer opruimen.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Annie</span></p>
+		<p class="c1"><span class="c7">Truus en ik.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">om al het gefax vanuit de darmstad te ontvangen..</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Annie</span></p>
+		<p class="c1"><span class="c7">Voor al u bruin gebreide truinen</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">Dus voelt u behoefte om even de WC-eend te voeren</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Annie</span></p>
+		<p class="c1"><span class="c7">Of Saintair te relaxen</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">De rioolbelasting te betalen</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Annie</span></p>
+		<p class="c1"><span class="c7">Of een beer te verzuipen.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18">Marit </span><span class="c0">Walgend </span></p>
+		<p class="c1"><span class="c7">Ja,ja, ja, we snappen het idee. </span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Johnny</span></p>
+		<p class="c1"><span class="c7">Of een laxatierapport op te stellen.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">Johnny&hellip;</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">De endeldarm te legen..</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">GENOEG!! Ongepast! GENOEG!! </span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c0">Stilte</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Shauny</span></p>
+		<p class="c1"><span class="c7">Gaat het?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">Genoeg zo! Bedankt.. </span></p>
+		<p class="c1"><span class="c0">Stilte.</span></p>
+		<p class="c1"><span class="c7">Sorry dat ik schreeuwde.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Annie</span></p>
+		<p class="c1"><span class="c7">Ik ben wel echt klaar met die ruzie tussen de bejaarden en de
+				studenten.</span>
+		</p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">Stelletje ongeregeld.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Louise</span></p>
+		<p class="c1"><span class="c7">Ik sluit mij hier wel volledig bij aan hoor. Karel, dit kan toch niet. We
+				komen
+				hier
+				voor onze rust, reinheid... </span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Chloey</span></p>
+		<p class="c1"><span class="c7">En geen regelmaat!</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c18">Hans</span></p>
+		<p class="c1"><span class="c7">Laten we samen even naar die wethouder lopen.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">We gaan met zn allen. Kom op jongens.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Iedereen staat op, kinderen onder protest, en ze gaan af.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Chloey komt nog even terug rennen om de telefoons te pakken. Daarna lopen
+				Annie
+				en
+				Truus er achteraan.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">An, hoe lang doen we dit?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Annie</span></p>
+		<p class="c1"><span class="c7">50 jaar Truus</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">50 jaar en nooit nog, in mijn hele WC leven heb ik dit..</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Annie</span></p>
+		<p class="c1"><span class="c7">Geen woorden, ik heb er gewoon geen woorden voor.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c11">Toilet deuren en stoelen af, handdoeken. Annie en Truus nemen zelf
+				spullen
+				mee.</span></p>
+		<p class="c1"><span class="c11">Decor medewerkers kijken verbaasd naar Opa.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c0">Iedereen is af, Opa staat nog.</span></p>
+		<p class="c1 c21"><span class="c18 c19">Licht langzaam naar schemer.</span></p>
+		<p class="c1 c21 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Hans komt terug op gerent.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Hans</span></p>
+		<p class="c1"><span class="c7">Haha, Pa&hellip; daar had ik u he&hellip; U dacht ze zijn me vergeten..
+				Grapje!&hellip;</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c21"><span class="c8">Opa</span></p>
+		<p class="c1 c21"><span class="c0">Mompelt iets onverstaanbaars</span></p>
+		<p class="c1 c21 c5"><span class="c0"></span></p>
+		<p class="c1 c21"><span class="c0">Opa en Hans af.</span></p>
+		<p class="c1 c21 c5"><span class="c0"></span></p>
+		<p class="c1 c21"><span class="c18">&nbsp;</span><span class="c18 c19">Black out.</span></p>
+		<p class="c1 c5"><span class="c0 c15"></span></p>
+		<p class="c1"><span class="c8 c15">Caravan naar voren. Camping tafel van rechts op, kaarsen, ouderen van
+				rechts
+				op.
+				Bierkratten links</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c22 scrollspy"><span class="c26 c18">Scene 7 - Nacht</span></p>
+		<p class="c10 c5"><span class="c0"></span></p>
+		<p class="c10"><span class="c0">Betty, Heinrich, Cor, Corrie, Gerard, Theodora, Joop, Janneke, Hanneke,
+				Saskia,
+				Donny, Pip, Winston, Bianca, Danielle, Fabrizio, Diederick &ndash; Jan, de toilet dames,
+				Wethouder
+				de
+				Boer,
+				zijn vrouw.</span></p>
+		<p class="c10"><span class="c18">Bejaarden op. </span><span class="c18 c19">Licht scene 7.</span></p>
+		<p class="c6"><span class="c0">Het is nacht. De ouderen zitten in een halve kring om kaarsen
+				heen.</span>
+		</p>
+		<p class="c6"><span class="c0">Ze spreken op fluister toon.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Heinz</span></p>
+		<p class="c6"><span class="c7">Ist voor jeder de missie helder und Klar?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Theodora</span></p>
+		<p class="c6"><span class="c7">Nou ik wil nog wel graag benoemen dat ik denk dat dit niet de oplossing
+				is.</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Joop </span></p>
+		<p class="c6"><span class="c7">Wat nodig is, is nodig Theodora. Het is niet anders.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Corrie</span><span class="c20 c9">&nbsp;</span></p>
+		<p class="c6"><span class="c7">Luister, ik brand nog steeds aan alle kanten en je wil niet weten hoeveel
+				onderbroeken ik van Cor heb moeten wassen, dus, helder und Klar Heinzie..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Janneke </span><span class="c0">Tegen haar pop</span></p>
+		<p class="c6"><span class="c7">Zoveel vieze luiers verschoont he. Maar dat geeft niet hoor, mama vind
+				jou
+				heel
+				lief.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Heinz</span></p>
+		<p class="c6"><span class="c7">Duidelijk! Dan wordt dit een strijd die ze niet snel zullen
+				vergeten.</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Gerard</span></p>
+		<p class="c6"><span class="c7">Ze zullen er dorstig uit komen. Ik maak een grapje. </span><span class="c0">Lacht
+				hard om zichzelf.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Heinz </span><span class="c0">Rolt een grote kaart uit</span></p>
+		<p class="c2"><span class="c16 c12">Dies sind die Positionen, die wir einnehmen. Joop jij gaat met mij
+				mee
+				op
+				patrouille. Cor en Gerard jullie staan auf der Hut, aan weerszijde van het
+				terrein.</span></p>
+		<p class="c2"><span class="c16 c12">Janneke en Hanneke zorg dat jullie op tijd gaat slapen. Betty..
+				mocht er
+				iemand
+				komen, jij zorgt voor de ablenkung. Theodora, bewaak het kamp. Eine aufgabe!</span></p>
+		<p class="c3 c25"><span class="c12 c32 c36"></span></p>
+		<p class="c2"><span class="c16 c18">Corrie</span></p>
+		<p class="c2"><span class="c16 c12">Helder, Cor en ik staan op wacht.</span></p>
+		<p class="c3 c25"><span class="c16 c12"></span></p>
+		<p class="c2"><span class="c16 c18">Heinz</span></p>
+		<p class="c2"><span class="c16 c12">Cor staat op wacht</span></p>
+		<p class="c3 c25"><span class="c16 c12"></span></p>
+		<p class="c2"><span class="c16 c18">Corrie</span></p>
+		<p class="c2"><span class="c16 c12">Cor en ik staan op wacht</span></p>
+		<p class="c3 c25"><span class="c16 c12"></span></p>
+		<p class="c2"><span class="c16 c18">Heinz</span></p>
+		<p class="c2"><span class="c16 c12">Cor staat op wacht</span></p>
+		<p class="c3 c25"><span class="c16 c18"></span></p>
+		<p class="c2"><span class="c16 c18">Corrie</span></p>
+		<p class="c2"><span class="c12 c32">Met Corrie</span></p>
+		<p class="c3 c25"><span class="c16 c12"></span></p>
+		<p class="c2"><span class="c16 c18">Cor</span></p>
+		<p class="c2"><span class="c16 c12">Zonder Corrie</span></p>
+		<p class="c3 c25"><span class="c16 c12"></span></p>
+		<p class="c2"><span class="c16 c18">Gerard</span></p>
+		<p class="c2"><span class="c12 c32">Met Gerard. </span><span class="c12 c13 c32">Stilte </span><span
+				class="c12 c16">Haha, ik maak een grapje.. Hahah</span></p>
+		<p class="c3 c25"><span class="c16 c12"></span></p>
+		<p class="c2"><span class="c16 c18">Heinz</span></p>
+		<p class="c2"><span class="c16 c12">Der Cor un Der Gerard staan op wacht. Corrie, bewaak ons eten, heel
+				belangrijk
+				dat er nichts mit ons essen gebeurt. Iedereen klaar&hellip;</span></p>
+		<p class="c3 c25"><span class="c16 c12"></span></p>
+		<p class="c2"><span class="c12 c13 c32">Alle bejaarden gaan in een kringetje staan met handen op elkaar.
+			</span><span class="c16 c12">3 2 1, HE, OOIEVAAR!</span></p>
+		<p class="c3 c25"><span class="c16 c18"></span></p>
+		<p class="c2"><span class="c18 c29 c32">Start Muziek Pink Panther.</span></p>
+		<p class="c3 c25"><span class="c33 c12 c13 c32"></span></p>
+		<p class="c2"><span class="c33 c12 c13 c32">Als afgesproken voeren de ouderen hun taak uit, Heinz gaat
+				over
+				het
+				podium als een ware strijder, Joop doet hem onhandig na. Voor op lopen (rijden) Gerard
+				en Cor heen
+				en
+				weer
+				met zaklampen. Betty, fladdert er af en toe tussendoor. &nbsp;Corrie en Theodora
+				bekijken het op een
+				afstandje. Janneke geeft haar pop de fles. Ze maken een rijtje en geven de drank door en
+				verstoppen
+				dit
+				gauw
+				in de kinderwagen. </span></p>
+		<p class="c2"><span class="c33 c12 c13 c32">Ze gaan voor hun Caravan zitten, of er niks gebeurt is.
+			</span>
+		</p>
+		<p class="c3 c25"><span class="c33 c12 c13 c32"></span></p>
+		<p class="c2"><span class="c18 c29 c32">Fade Pink Panther.</span></p>
+		<p class="c3 c25"><span class="c33 c12 c13 c32"></span></p>
+		<p class="c2"><span class="c18 c19 c32">Licht naar dag op de camping</span></p>
+		<p class="c3 c25"><span class="c12 c13 c32 c33"></span></p>
+		<p class="c2"><span class="c33 c12 c13 c32">De zon komt op en 1 voor 1 komen een voor een op.</span></p>
+		<p class="c3 c25"><span class="c33 c12 c13 c32"></span></p>
+		<p class="c6"><span class="c8">Pip </span></p>
+		<p class="c6"><span class="c7">Volgende keer ga ik echt niet meer mee. Mijn benen doen pijn.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Fabrizio</span></p>
+		<p class="c6"><span class="c7">Niet zo zeuren. Een fiets huren op deze camping is hartstikke duur en
+				lopen
+				kan
+				echt
+				geen kwaad.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Pip</span></p>
+		<p class="c6"><span class="c7">Geen kwaad? Ik denk dat ik nooit meer normaal lopen kan.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Winston</span></p>
+		<p class="c6"><span class="c7">Weet je wat jij nodig hebt Pip? </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c10"><span class="c0">Winston loopt naar de drank pot toe en komt erachter dat alle drank weg
+				is.</span>
+		</p>
+		<p class="c6"><span class="c8">Winston </span></p>
+		<p class="c6"><span class="c7">He&hellip; Het bier is weg&hellip;</span></p>
+		<p class="c6"><span class="c0">Donny, Fabrizio en Saskia kijken mee.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Dani&euml;lle </span></p>
+		<p class="c6"><span class="c7">Alweer? Winston!</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Bianca</span></p>
+		<p class="c6"><span class="c7">Je zei gisterenavond nog zo dat er zoveel over was, dat we niet meer naar
+				de
+				winkel
+				hoefde vandaag.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Danielle</span></p>
+		<p class="c6"><span class="c7">Hoeveel drink jij wel niet?</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Winston </span></p>
+		<p class="c6"><span class="c7">Nee, nee. Ik was het niet.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Het is echt weg. Ik bedoel weg, weg. </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Donny</span></p>
+		<p class="c6"><span class="c7">Als in; weg, verdwenen!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Danielle</span></p>
+		<p class="c6"><span class="c7">Verdwenen? Hoe kan dat? Wie doet zoiets? Jongens bier kan niet zomaar
+				weglopen.
+				Wij
+				hebben een heel duidelijke begroting gemaakt voor deze drie weken.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Alle studenten kijken richting de bejaarden, zij kijken heel opvallend de
+				andere
+				kant
+				op.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Danielle </span><span class="c0">Ratelt door</span></p>
+		<p class="c6"><span class="c7">En er is geen ruimte voor nieuw bier. Horen jullie mij? Geen ruimte.. Of
+				misschien
+				als we.. nog 1 week alleen op rijst, eventueel pannenkoekmeel.. en dan goedkoper Bier..
+				Dan moet het
+				haalbaar zijn, maar jongens dan moeten we streng zijn voor elkaar, Winston je kan niet..
+			</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Ze ziet waar de anderen naar kijken.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Danielle</span></p>
+		<p class="c6"><span class="c7">Wat?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Er valt een stilte.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Winston </span><span class="c0">springt woest op</span></p>
+		<p class="c6"><span class="c7">Dat stelletje, graftakken!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Alle studenten rennen, met Winston voor op, scheldend richting de
+				bejaarden.
+				Gerard
+				springt op en rolt zijn rolstoel tegen Winston aan. Iedereen schreeuwt door elkaar,
+				bejaarden
+				proberen
+				studenten met stokken te slaan. Saskia en Joop schreeuwen om het hardst deftige
+				scheldwoorden naar
+				elkaar.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Wethouder de boer en zijn vrouw komen aangesneld.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Wethouder</span></p>
+		<p class="c6"><span class="c7">Wel alle iglotenten nog aan toe. STILTE!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Iedereen staat beteuterd naar zijn tenen te kijken.</span></p>
+		<p class="c6"><span class="c0">Vanaf de andere kant komen de gezinnen en toiletdames aangesneld.</span>
+		</p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Louise</span></p>
+		<p class="c6"><span class="c7">Ah Daar bent u, meneer de Boer! </span></p>
+		<p class="c6"><span class="c7">Luister meneer, dit kan zo niet langer de hele boel is..</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Wethouder</span></p>
+		<p class="c6"><span class="c7">Geen seconde langer..</span></p>
+		<p class="c6"><span class="c7">Het is genoeg ik ben hier zo ongelooflijk klaar mee, jullie &nbsp;zijn
+				verschrikkelijk!</span></p>
+		<p class="c6"><span class="c7">We gaan dit voor eens en voor altijd stoppen. </span></p>
+		<p class="c6"><span class="c7">De winnaar krijgt de ooievaar. De verliezer zoekt het maar uit. <br>En
+				hierna
+				wil
+				ik
+				jullie nooit meer op mijn camping zien. Duidelijk?</span></p>
+		<p class="c6"><span class="c7">De beslissing valt onder een potje tafeltennis. Vanmiddag stipt om
+				15.00uur.
+				Wees
+				op
+				tijd en wees voorbereid!</span></p>
+		<p class="c10 c5"><span class="c8"></span></p>
+		<p class="c10"><span class="c0">Er valt een lange pijnlijke stilte. </span></p>
+		<p class="c6"><span class="c8">Marie</span></p>
+		<p class="c6"><span class="c7">Namaste, wie wil er een kopje thee? Hou het bij je chi en dan komt het
+				goed.
+				Peace,
+				make love not war..</span></p>
+		<p class="c10 c5"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Als het om sport gaat winnen we sowieso kijk dan we zijn jong en fit en
+				dan
+				hebben we
+				ook nog eens Donny. </span><span class="c0">(donny laat zijn spieren zien.)</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Joop</span><span class="c7">&nbsp;</span></p>
+		<p class="c6"><span class="c7">Jullie mogen dan wel jong en fit zijn, maar jullie missen de ervaring.
+				Kijk
+				eens
+				naar
+				onze Cor, hier staat 75 jaar pingpong ervaring. </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Gerard</span></p>
+		<p class="c6"><span class="c7">Ik zou maar heel bang zijn als ik jullie was..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Saskia </span><span class="c0">Sarcastisch</span></p>
+		<p class="c6"><span class="c7">Doodsbang zijn we! Brr.. kijk ik tril helemaal! Haha, laat me niet
+				lachen.</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Fabrizio</span></p>
+		<p class="c6"><span class="c7">Kom op jongens, we gaan ons voorbereiden.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Studenten gaan links af. Bejaarden rechts, </span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Johnny</span></p>
+		<p class="c6"><span class="c7">Oh dit wordt fantastisch!!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Wethouder de Boer</span></p>
+		<p class="c6"><span class="c7">Goed, geen reden voor paniek..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Marie</span></p>
+		<p class="c6"><span class="c7">Adem in en Adem uit&hellip;</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Wethouder de Boer</span></p>
+		<p class="c6"><span class="c7">U bent natuurlijk uitgenodigd te komen kijken&hellip;</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Shauny</span></p>
+		<p class="c6"><span class="c7">Wat denk jij, ik ga vast zitten voor de beste plekken!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Kinderen rennen af, de ouders erachter aan. </span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Wethouder de Boer</span></p>
+		<p class="c6"><span class="c7">Ik heb er een hard hoofd in Marie..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Marie</span></p>
+		<p class="c6"><span class="c7">Een kleine positieve gedachte in de ochtend kan de richting van je hele
+				dag
+				bepalen,
+				schat.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Wethouder en Marie gaan af.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6 c14"><span class="c8">Truus</span></p>
+		<p class="c6 c14"><span class="c7">Oh, oh&hellip;&hellip; Het gaat er om spannen</span></p>
+		<p class="c3 c14"><span class="c7"></span></p>
+		<p class="c6 c14"><span class="c8">Annie</span></p>
+		<p class="c6 c14"><span class="c7">Ik schijt zeven kleuren jongens..</span></p>
+		<p class="c3 c14"><span class="c7"></span></p>
+		<p class="c6 c14"><span class="c0">Annie en Truus af.</span></p>
+		<p class="c3 c14"><span class="c0"></span></p>
+		<p class="c6 c14"><span class="c8 c19">Black out</span></p>
+		<p class="c3 c14"><span class="c8"></span></p>
+		<p class="c6"><span class="c8 c15">Caravan wordt naar achter geduwt. </span></p>
+		<p class="c6"><span class="c8 c15">Kratten af.</span></p>
+		<p class="c6"><span class="c8 c15">Tafel rechts + overgebleven stoelen rechts af.</span></p>
+		<p class="c6 c14"><span class="c8 c15">Podium leeg.</span></p>
+		<p class="c3 c14"><span class="c0 c19"></span></p>
+		<p class="c6 c14"><span class="c8 c19">Licht Zang 2</span></p>
+		<p class="c3 c14"><span class="c8"></span></p>
+		<p class="c6 c14"><span class="c8 c29">Zang 2</span></p>
+		<p class="c3 c14"><span class="c8"></span></p>
+		<p class="c6 c14"><span class="c8">Applaus Zang </span><span class="c8 c19">Black Out</span></p>
+		<p class="c3 c14"><span class="c20 c9"></span></p>
+		<p class="c3 c14"><span class="c20 c9"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">&nbsp;</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c35 scrollspy"><span class="c18 c26">Scene 8</span></p>
+		<p class="c10"><span class="c0">Betty, Heinrich, Cor, Corrie, Gerard, Theodora, Joop, Janneke, Saskia,
+				Donny,
+				Pip,
+				Winston, Bianca, Danielle, Diederick &ndash; Jan, de toilet dames, Wethouder de Boer,
+				zijn vrouw,
+				gezinnen.</span></p>
+		<p class="c6 c14"><span class="c8 c15">Zes blokken op. Ping Pong tafel + bedjes in het midden.</span>
+		</p>
+		<p class="c3 c14"><span class="c8"></span></p>
+		<p class="c10"><span class="c0">Bejaarden en Studenten gaan klaar staan.</span></p>
+		<p class="c10"><span class="c8 c19">Licht Scene 8
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<p class="c10"><span class="c18 c29">Start</span><span class="c9 c29">&nbsp;Champions league
+				theme.</span>
+		</p>
+		<p class="c10 c5"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">De pingpong wedstrijd is in volle gang. Ze doen rond de tafel. De overige
+				camping
+				gasten staan er om heen en kijken gespannen toe.</span></p>
+		<p class="c10"><span class="c0">Dan struikelt Theodora en komt ze lelijk ten val. </span></p>
+		<p class="c10"><span class="c18 c29">Abrupte Stop Champions league theme.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Iedereen schrikt en bevriest.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Joop </span></p>
+		<p class="c6"><span class="c7">Oh jeetje, oh jeetje, ohhh jeeetje, oh jeetje&hellip;</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Danielle</span><span class="c7">&nbsp;</span></p>
+		<p class="c6"><span class="c7">Diederick, Diederick doe iets! </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Diederick-Jan</span></p>
+		<p class="c6"><span class="c7">Het is Diederick-JAN! </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Danielle</span></p>
+		<p class="c6"><span class="c7">What ever! Doe iets.. Jij studeert geneeskunde..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Diederick-Jan </span><span class="c0">Kucht zenuwachtig..</span></p>
+		<p class="c6"><span class="c7">Jongens, ik moet wat bekennen. Na bijna 4 jaar tot dit studentenkoor te
+				behoren,
+				moet
+				ik helaas mededelen dat ik nog steeds in het eerste jaar van mijn studie zit. </span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Danielle</span></p>
+		<p class="c6"><span class="c7">Wat?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Diederick &ndash; Jan</span></p>
+		<p class="c6"><span class="c7">Ik heb nog maar 10 studiepunten behaald.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Fabriazio</span></p>
+		<p class="c6"><span class="c7">Dus wat je probeert te zeggen is&hellip;dat ze nu door jou stommiteit
+				doodgaat?
+				Ga je
+				schamen, DJ! Iemand anders die EHBO heeft? </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Marie</span></p>
+		<p class="c6"><span class="c7">Ik kan haar onder hypnose brengen.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Danielle</span></p>
+		<p class="c6"><span class="c7">we bellen nu 112! </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Cor</span></p>
+		<p class="c6"><span class="c7">Juist ja, Kom op Donny dat is een mooie taak voor ons. </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Fabrizio</span></p>
+		<p class="c6"><span class="c7">Bianca en Betty haal een kussen voor onder haar hoofd. </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Corrie</span></p>
+		<p class="c6"><span class="c7">Gerard en Danielle ga als de wiedeweerga water halen! </span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Winston</span></p>
+		<p class="c6"><span class="c7">Ik let op het bier!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Joop </span></p>
+		<p class="c6"><span class="c7">He, he.. ik verdeel de taken, ik ben de baas&hellip; Cor en Don bel 112,
+				Betty&hellip;</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Cor en Donny Bellen rechts voor 112.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Wie bepaalt dat? Ik ben hier de gene die Japanse rechten gestudeerd
+				heeft.</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Gerard</span></p>
+		<p class="c6"><span class="c7">Ahhh heerlijk, babipangang, kuluyuk, fu yung Hai..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Danielle</span></p>
+		<p class="c6"><span class="c7">Gerard, water nu!</span></p>
+		<p class="c6"><span class="c7">&nbsp;</span></p>
+		<p class="c6"><span class="c8">Joop Westerman</span></p>
+		<p class="c6"><span class="c7">Als je het allemaal zo goed weet, ga jij je dan eerst, net als ik, eens
+				nuttig
+				maken.
+				Als voorzitter van de jongeren ben je..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Fabrizio </span><span class="c0">Komt tussen beide.</span></p>
+		<p class="c6"><span class="c7">Niet nu! Weg.. allebei.. Jij die kant.. en jij die kant op. Hup! Decor
+				ploeg;
+				Haal
+				die tafeltennis tafel weg.</span></p>
+		<p class="c6"><span class="c8 c15">Decor komt op en haalt tafel weg.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Saskia loopt beledigd het podium af. Joop loopt de andere kant op. Alle
+				andere
+				zijn
+				in de weer om Theodora te helpen.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Cor</span></p>
+		<p class="c6"><span class="c7">Ze komen er aan!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8 c19">Black out.</span><span
+				class="c8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c22 scrollspy"><span class="c26 c18">Scene 9</span></p>
+		<p class="c1"><span class="c8">Personages</span></p>
+		<p class="c1"><span class="c0">Wethouder de Boer, Marie de Boer, Gezinnen, Truus en Annie</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c11">Twee stoelen rechts voor. Badlakens midden.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c0">Karel Hans en Kinderen op.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c18 c19">Licht scene 9</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Hans en Karel in een stoel met een biertje. De kinderen zitten op een
+				handdoek
+				ernaast. Louise en Marit komen aangelopen met Annie en Truus.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">Kom maar even zitten dames.</span></p>
+		<p class="c1"><span class="c7">Het is ook niet niks natuurlijk. We zijn allemaal ontzettend
+				geschokken.</span>
+		</p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Annie</span></p>
+		<p class="c1"><span class="c7">Geen woorden</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">Gewoon geen woorden voor.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Annie</span></p>
+		<p class="c1"><span class="c7">Met de mond vol tanden</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">Ongekend toch jongens, dat we dit vandaag de dag nog mee mogen
+				maken..</span>
+		</p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Annie</span></p>
+		<p class="c1"><span class="c7">Nog nooit, in mn hele leven niet</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Truus</span></p>
+		<p class="c1"><span class="c7">Nog nooit meegemaakt.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Shauny</span></p>
+		<p class="c1"><span class="c7">Maar het was geen gewone val ook he.. </span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Johnny</span></p>
+		<p class="c1"><span class="c7">Dikke buikschuiver man.. als hier de tafel was viel ze echt helemaal hier
+				naar
+				toe..</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Bobby</span></p>
+		<p class="c1"><span class="c7">En hard ook he.. Vol op d&rsquo;r muil.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">Jongens!</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Chloey</span></p>
+		<p class="c1"><span class="c7">Ik heb alles gefilmd, begin tot eind. Zo is ze in beeld en zo.. hop ligt
+				ze
+				op de
+				grond. IK hield het echt niet meer..</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Louise</span></p>
+		<p class="c1"><span class="c7">Wat?</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Chloey</span></p>
+		<p class="c1"><span class="c7">Ja, weet ik&hellip; niet netjes, maar kom op jij zag toch ook hoe ze
+				viel&hellip;</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Louise</span></p>
+		<p class="c1"><span class="c7">Nee, nee.. daarvoor. Jij hebt alles gefilmd? Hoe dan? Waarmee heb jij
+				alles
+				gefilmd?</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Chloey</span></p>
+		<p class="c1"><span class="c7">Haha, oh &hellip; haha, zei ik gefilmd.. nee ik bedoel
+				natuurlijk&hellip;</span>
+		</p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Johnny</span></p>
+		<p class="c1"><span class="c7">Niet Chloey, Donny had alles gefilmd. Die van de studentjes. Donny, die
+				had
+				alles
+				gefilmd.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Abbey</span></p>
+		<p class="c1"><span class="c7">Oh, hij is echt zoo knap.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">Abbey! Je bent 13..</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Abbey</span></p>
+		<p class="c1"><span class="c7">Hij heeft m&rsquo;n insta gevraagd..</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Hans</span></p>
+		<p class="c1"><span class="c7">Abbey, je bent 13 jaar!! Hou op..</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">Dan is het maar goed dat jij geen instagram hebt he, meisje. Gelukkig
+				maar.</span>
+		</p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Abbey</span></p>
+		<p class="c1"><span class="c7">Nee, precies, inderdaad.. gelukkig maar&hellip; Nee.. ik&hellip; nee..
+				niet.
+				Nee
+				hoor&hellip;</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Johnny</span></p>
+		<p class="c1"><span class="c7">Waar is Opa eigenlijk?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">Hans!</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Hans</span></p>
+		<p class="c1"><span class="c7">Shit!</span></p>
+		<p class="c1"><span class="c0">Hans snelt af om opa te halen.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Abbey</span></p>
+		<p class="c1"><span class="c0">Tegen Chloey</span></p>
+		<p class="c1"><span class="c7">Hij heeft al drie foto&rsquo;s geliked!</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">Wat?</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c8">Abbey</span></p>
+		<p class="c1"><span class="c7">Nee, ik heb natuurlijk geen insta, maar hij wel snap je.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Marit</span></p>
+		<p class="c1"><span class="c7">Nee, natuurlijk.. ja.. hij wel. Vriendelijke jongens toch.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Stilte</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c0">Hans komt op met Opa in de rolstoel.</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Hans</span></p>
+		<p class="c1"><span class="c7">Zo! We hadden net over de social media Pa. Wat vind jij daar nou
+				van?</span>
+		</p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Opa</span></p>
+		<p class="c1"><span class="c0">Mompelt een onverstaanbaar langdurig verhaal.</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c18">Karel </span><span class="c0">Onderbreekt Opa.</span></p>
+		<p class="c1"><span class="c7">Goed. En nu jongens, wat staat er op het programma?</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c8">Hans</span></p>
+		<p class="c1"><span class="c7">Lekker barbe-knoeien. Of niet, maatje?</span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c8">Karel</span></p>
+		<p class="c1"><span class="c7">Ik had het zelf niet beter kunnen verwoorden, maatje.</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18">Abbey </span><span class="c12 c13">Ge&iuml;rriteerd</span></p>
+		<p class="c1"><span class="c7">Serieus?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Hans</span></p>
+		<p class="c6"><span class="c7">Nou Veel plezier he jongens. Op naar de barbeknoei! Gaan jullie mee,
+				maatjes?</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Hans, Karel, Marit, Louise, Annie en Truus, pakken hun spullen en lopen
+				links
+				voor
+				af.</span></p>
+		<p class="c6"><span class="c0">De kinderen gaan gauw aan de andere kant af. </span></p>
+		<p class="c6"><span class="c0">Opa blijft staan. </span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Opa</span></p>
+		<p class="c6"><span class="c0">Mompelt iets onverstaanbaars</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Stilte</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Opa </span><span class="c0">Staat op uit zijn rolstoel</span></p>
+		<p class="c6"><span class="c7">Het is toch werkelijk ongehoord! </span></p>
+		<p class="c6"><span class="c7">Stelletje klote kinderen.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Loopt luid scheldend met oude scheldwoorden, achter zijn rolstoel
+				af</span>
+		</p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c1"><span class="c9 c19">Black out</span></p>
+		<p class="c1 c5"><span class="c20 c9"></span></p>
+		<p class="c1"><span class="c11">Podium leeg</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c18 c19">Licht zang 3</span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1"><span class="c18 c29">Zang 3</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1"><span class="c0">Applaus zang</span></p>
+		<p class="c1"><span class="c18 c19">Black out</span></p>
+		<p class="c1 c5"><span class="c8"></span></p>
+		<p class="c1 c5"><span class="c0"></span></p>
+		<p class="c1 c5"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c27 scrollspy"><span class="c26 c18">Scene 10</span></p>
+		<p class="c3"><span class="c26 c18"></span></p>
+		<p class="c10"><span class="c0">Betty, Heinrich, Cor, Corrie, Gerard, Theodora, Joop, Janneke, Saskia,
+				Donny,
+				Pip,
+				Winston, Bianca, Danielle, Diederick &ndash; Jan, Fabrizio.</span></p>
+		<p class="c1"><span class="c11">Stoelen bejaarden, Handdoeken studenten.</span></p>
+		<p class="c10 c5"><span class="c20 c9"></span></p>
+		<p class="c10"><span class="c18">Spelers op </span><span class="c18 c19">Licht scene 10</span></p>
+		<p class="c6"><span class="c0">Stilte. We zien links de studenten bij elkaar zitten. Ze kijken droevig
+				en
+				drinken
+				een biertje.</span></p>
+		<p class="c6"><span class="c0">Rechts zien we de bejaarden bij elkaar zitten, ook in stilte..</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Danielle</span></p>
+		<p class="c6"><span class="c7">Ik denk dat we een grote fout hebben gemaakt.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Jongens, we hebben gewonnen. Het lijkt mij dat we iets goed gedaan
+				hebben! Op
+				de
+				Ooievaar!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Fabrizio</span></p>
+		<p class="c6"><span class="c7">Serieus? Hoe durf je dat te zeggen. We hadden ze nooit laxeermiddel mogen
+				geven.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Luister, wij hebben het goed gedaan. We hebben haar toch niet bewust
+				laten
+				struikelen?</span></p>
+		<p class="c6"><span class="c7">Het lijkt me niet onze schuld dat die ouwe tang niet kan lopen!</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Fabrizio</span></p>
+		<p class="c6"><span class="c7">Hoe durf je zo over haar te praten? </span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Donny</span><span class="c7">&nbsp;</span></p>
+		<p class="c6"><span class="c7">Mee eens gappie, deze oudere generatie zijn gewoon wat fragieler. Daar
+				moet
+				je
+				voorzichtig mee om gaan.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Bianca</span></p>
+		<p class="c6"><span class="c7">Die val zag er echt pijnlijk uit hoor.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Danielle</span></p>
+		<p class="c6"><span class="c7">En ze bleef zo rustig er onder.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Bianca</span></p>
+		<p class="c6"><span class="c7">Echt respect hoor.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Donny</span></p>
+		<p class="c6"><span class="c7">Zij bakte trouwens ziek goede brownies pik, niet mis!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Winston</span><span class="c7">&nbsp;</span></p>
+		<p class="c6"><span class="c7">Misschien moeten we sorry zeggen, Dit gaat wel ver.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Pip</span></p>
+		<p class="c6"><span class="c7">Vind ik ook. Zij deelde altijd koekjes en alles uit en dan valt ze door
+				ons.</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Fabrizio</span></p>
+		<p class="c6"><span class="c7">Wie gaat er mee sorry zeggen?</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Dani&euml;lle</span></p>
+		<p class="c6"><span class="c7">Misschien kunnen we dan toch de Ooievaar delen.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Wat? Nee! Ze waren super gemeen tegen ons. </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Iedereen staat op om excuses aan te gaan bieden.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Ik meen het jongens, we zijn zo dichtbij de overwinning!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Ze lopen richting de bejaarden.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Als jullie voorzitter eis ik dat jullie blijven staan. </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Donny</span></p>
+		<p class="c6"><span class="c7">Eis maar wat je wilt, maar wij gaan onze excuses aanbieden. </span></p>
+		<p class="c6"><span class="c7">Moeten we iets van bloemen meenemen?</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Ze overleggen.</span></p>
+		<p class="c6"><span class="c0">Saskia blijft beteuterd achter. </span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Betty</span></p>
+		<p class="c6"><span class="c7">Arme, lieve Theodora. Ik denk dat we een grote fout hebben
+				gemaakt.</span>
+		</p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Gerard</span></p>
+		<p class="c6"><span class="c7">We hadden nooit al hun bier moeten stelen. </span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Joop</span></p>
+		<p class="c6"><span class="c7">We hebben goed gehandeld, Theodora gaat het overleven, dus er is niemand
+			</span><span class="c0">heftig </span><span class="c7">gewond. En zij krijgen hier de schuld
+				van. De
+				ooievaar is bijna
+				weer van ons.. eind goed,&hellip;</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Gerard</span></p>
+		<p class="c6"><span class="c7">Joop, hoe kan je dit nou zeggen? </span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Cor</span></p>
+		<p class="c6"><span class="c7">We hebben een vriendin op het spel gezet om onze gelijk te krijgen.
+			</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Betty</span></p>
+		<p class="c6"><span class="c7">Misschien hadden we meteen moeten delen met die knappe jongens.</span>
+		</p>
+		<p class="c6"><span class="c7">&nbsp;</span></p>
+		<p class="c6"><span class="c8">Joop</span></p>
+		<p class="c6"><span class="c7">Ben je helemaal belatafeld. Jongens.. alles voor de ooievaar weten jullie
+				nog?</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Heinz</span></p>
+		<p class="c6"><span class="c7">Wir hadden das bier nimmer moeten stelen.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Janneke </span><span class="c0">Tegen haar pop</span></p>
+		<p class="c6"><span class="c7">We hadden gewoon vriendjes moeten maken he, net als jij en ik.. </span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Joop</span></p>
+		<p class="c6"><span class="c7">Ik, Joop Johannes Cornelis Alexander Lodewijk Westerman voorzitter van
+				deze
+				oudere
+				groep, opa van een prachtig kleinkind, zoon van een best man en een man van goed hart
+				geeft zich
+				niet
+				zomaar
+				over. De ooievaar is van ons en blijft van ons!</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Gerard</span><span class="c7">&nbsp;Een eigenwijze Ezel dat ben
+				je!</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">De studenten zijn bij de bejaarden aangekomen. Joop draait zich
+				demonstratief
+				om.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Fabrizio</span></p>
+		<p class="c6"><span class="c7">Kunnen we misschien even met u praten?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Heinz</span></p>
+		<p class="c6"><span class="c7">Abernaturlich kinderen. Kom er bij!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Studenten en bejaarden gaan samen af.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Joop Saskia blijven achter. Lopen langzaam naar het midden.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c4"><span class="c8">Saskia</span></p>
+		<p class="c4"><span class="c7">Meneer Westerman.</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Joop Westerman</span></p>
+		<p class="c4"><span class="c7">Mejuffrouw Saskia</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4"><span class="c8">Saskia</span></p>
+		<p class="c4"><span class="c7">Nog nieuws over&hellip;</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Joop</span></p>
+		<p class="c4"><span class="c7">Nee, nee.. bedankt voor&hellip;</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Saskia</span></p>
+		<p class="c4"><span class="c7">Ja&hellip; Maar goed..</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Joop</span></p>
+		<p class="c4"><span class="c7">Zeker..</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Saskia</span></p>
+		<p class="c4"><span class="c7">Ja&hellip;</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c0">Stilte. </span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Joop</span></p>
+		<p class="c4"><span class="c7">Als u maar niet denkt, dat het nu goed gemaakt is.</span></p>
+		<p class="c4"><span class="c8">Saskia</span></p>
+		<p class="c4"><span class="c7">Goed gemaakt, pardon?</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Joop</span></p>
+		<p class="c4"><span class="c7">Zeker niet! Wij strijden voor Clubhuis de ooievaar tot de laatste
+				&nbsp;snik.</span>
+		</p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Saskia</span></p>
+		<p class="c4"><span class="c7">Dan wens ik u een prettige strijd Joop Westerman. Want wij geven niet
+				op!</span>
+		</p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c0">Betty en Fabrizio lopen op.</span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4"><span class="c8">Joop</span></p>
+		<p class="c4"><span class="c7">Ha, Betty.. Vertel jij deze jongedame eventjes dat wij, onder geen enkel
+				beding
+				opgeven als het gaat om de</span></p>
+		<p class="c4 c5"><span class="c8"></span></p>
+		<p class="c4"><span class="c8">Saskia</span></p>
+		<p class="c4"><span class="c7">&lsquo;Onder geen beding&rsquo; .. Nou, nou, nou meneer heeft het hoog in
+				zijn
+				bolletje.. Wij hebben de wedstrijd gewonnen, of heeft uw brein dat niet meer
+				helemaal&hellip;</span>
+		</p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Joop</span></p>
+		<p class="c4"><span class="c7">Pardon, laat me niet lachen! Jullie hebben, doelbewust!, een van ons
+				uitgeschakeld.
+				Zonder ook maar enige schaamte. Een dame op leeftijd zo te laten vallen, hoe durf
+				je.</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Saskia</span></p>
+		<p class="c4"><span class="c7">Ah serieus? Dit Gezeik? Fabrizio zeg even tegen deze man, hoe fout hij is
+				en
+				hoe
+				ontzettend wij gewonnen hebben.</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Fabrizio</span></p>
+		<p class="c4"><span class="c7">Nee</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Joop</span></p>
+		<p class="c4"><span class="c7">Hahaha, nou mejuffrouw de veurzitter het lijkt er niet op dat u nog veel
+				gezag
+				heeft..</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Betty</span></p>
+		<p class="c4"><span class="c7">Ach Joopie, laat het toch los.</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c0">Stilte. Joop en Saskia ongemakkelijk.</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c7">Je zet je zelf voor schut, lieve schat. Ga naar t toilet, leeg je stoma
+				en
+				kom
+				daarna
+				barbecue&euml;n. </span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Fabrizio</span></p>
+		<p class="c4"><span class="c7">En jij ook Sas, iedereen is er bij. Kom op jongens&hellip; Ik denk dat we
+				er
+				uit
+				kunnen komen..</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c0">Er valt een lange stilte</span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4"><span class="c8">Betty </span><span class="c0">Tegen Fabrizio</span></p>
+		<p class="c4"><span class="c7">Nou, mijn knappe hunk, het eten wordt koud&hellip;</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c8">Fabrizio</span></p>
+		<p class="c4"><span class="c7">Jammer jongens.</span></p>
+		<p class="c4 c5"><span class="c7"></span></p>
+		<p class="c4"><span class="c0">Betty en Fabrizio lopen af&hellip;</span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4"><span class="c8">Joop</span></p>
+		<p class="c4"><span class="c7">Geen denken aan! </span></p>
+		<p class="c4"><span class="c0">Loopt af</span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4"><span class="c8">Saskia</span></p>
+		<p class="c4"><span class="c7">Over mijn lijk!</span></p>
+		<p class="c4"><span class="c0">Loopt andere kant op af.</span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c6"><span class="c8 c19">Black out</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8 c15">Podium Leeg</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8 c19">Zang 4</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8 c29">Zang 4</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Applaus Zang</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8 c19">Black out</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c4 c5"><span class="c8"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c4 c5"><span class="c0"></span></p>
+		<p class="c27 scrollspy"><span class="c26 c18">Scene 11</span></p>
+		<p class="c27 c5"><span class="c26 c18"></span></p>
+		<p class="c10"><span class="c0">Betty, Heinrich, Cor, Corrie, Gerard, Theodora, Joop, Janneke, Saskia,
+				Donny,
+				Pip,
+				Winston, Bianca, Danielle, Diederick &ndash; Jan, Fabrizio, Gezin K, Gezin J, Wethouder
+				en vrouw,
+				&nbsp;</span></p>
+		<p class="c10"><span class="c11">Zwarte blokken halve cirkel, kampvuur midden.</span></p>
+		<p class="c10"><span class="c8">Alle spelers op</span></p>
+		<p class="c10"><span class="c18 c19">Licht Scene 11</span></p>
+		<p class="c10"><span class="c0">Alle camping gasten, op Joop en Saskia na, zitten gezellig aan de
+				barbecue.
+				Er
+				wordt
+				muziek gemaakt, Gitarist tussen de gasten bij het kampvuur &nbsp;een gezellige sfeer.
+				Hans en Karel
+				staan
+				achter de bbq, met Gerard die aanwijzingen geeft.</span></p>
+		<p class="c6"><span class="c8">Hans</span></p>
+		<p class="c6"><span class="c7">Lekker Barbeknoeien Jongens!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Karel</span></p>
+		<p class="c6"><span class="c7">Heerlijke Sat&eacute; Maatje</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Truus en Annie schieten in de lach.</span></p>
+		<p class="c10 c5"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Pip</span></p>
+		<p class="c6"><span class="c7">Dus, ze wilden serieus niet komen?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Betty</span></p>
+		<p class="c6"><span class="c7">En ik deed nog zo mijn best, echt hoor.. </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Gerard</span></p>
+		<p class="c6"><span class="c7">Het is jouw schuld niet Bets, ze zijn gewoon koppig die twee..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Donny</span></p>
+		<p class="c6"><span class="c7">Oh, ik word gebeld door het ziekenhuis!! </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Abbey </span><span class="c0">Verliefd</span></p>
+		<p class="c6"><span class="c7">Oh, jij bent echt belangrijk he Donny..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Cor</span></p>
+		<p class="c6"><span class="c7">Opnemen Don!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Donny staart naar de telefoon.</span></p>
+		<p class="c6"><span class="c0">Cor pakt de telefoon over.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c0">Joop en Saskia komen, beide van een andere kant, opgelopen. Ze schamen
+				zich.
+				Sluiten
+				zich bij het gezelschap aan en luisteren mee, met het gesprek</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Cor</span></p>
+		<p class="c6"><span class="c7">Juist&hellip;. Ja&hellip;. Heel fijn. Goed om te horen&hellip;. Ja,
+				ja&hellip;
+				Dank u
+				wel. Fijne dag ook voor u</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Pip</span></p>
+		<p class="c6"><span class="c7">En&hellip;?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Don</span></p>
+		<p class="c6"><span class="c7">Alleen een gebroken heup!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Cor</span></p>
+		<p class="c6"><span class="c7">Ze wordt geopereerd en moet dan nog een tijdje revalideren, maar alles
+				komt
+				goed!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Iedereen reageert uitgelaten, omhelst elkaar, deelt schouder kloppen uit,
+				en
+				proost
+				op Theodora en de ooievaar.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Saskia en Joop staan er ongemakkelijk bij..</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8">Janneke</span><span class="c20 c9">&nbsp;</span><span class="c0">Tegen de
+				pop</span>
+		</p>
+		<p class="c4"><span class="c7">Jaaa, kleintje, alles komt goed.</span></p>
+		<p class="c4"><span class="c7">Als Ome Joop en tante Saskia het nu ook nog goed maken, hebben we een
+				leuk
+				feestje
+				he.. ja..</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c0">Saskia en Joop kijken elkaar aan, geven elkaar een ongemakkelijk hand en
+				proosten.</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Corrie</span></p>
+		<p class="c6"><span class="c7">Zooo, Dus Cor en ik begrijpen dat het weer helemaal ok&eacute; is tussen
+				jullie
+				en
+				dat we het clubhuis delen? </span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Joop</span></p>
+		<p class="c6"><span class="c7">Als mejuffrouw Saskia ook akkoord kan gaan?</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Als we een paar regels opstellen, is het toch wel mogelijk om het
+				clubhuis te
+				delen.
+			</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Winston </span></p>
+		<p class="c6"><span class="c7">Ik vind het allemaal goed, als de drankvoorraad maar continu wordt
+				aangevuld.
+			</span>
+		</p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Gerard</span></p>
+		<p class="c6"><span class="c7">En de bitterballen! </span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Joop</span></p>
+		<p class="c6"><span class="c7">Dan zal ik zeggen; hierbij is de bejaarden-studenten soos een feit.
+			</span>
+		</p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8">Saskia</span></p>
+		<p class="c6"><span class="c7">Op de studenten-bejaardensoos</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8">Winston</span></p>
+		<p class="c6"><span class="c7">Dit moet gevierd worden!! SHOTJES!!!!</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8 c19">Black Out</span></p>
+		<p class="c3"><span class="c8"></span></p>
+		<p class="c6"><span class="c8 c15">Podium Leeg</span></p>
+		<p class="c6"><span class="c8">Dansers klaar</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8 c19">Licht Dans 3</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c6"><span class="c8 c29">Dans 3</span></p>
+		<p class="c3"><span class="c7 c29"></span></p>
+		<p class="c6"><span class="c0">Spelers rennen af.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Applaus dans. </span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c8 c19">Licht fade uit.</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c20 c9 c29">Start This will be</span></p>
+		<p class="c6"><span class="c0 c19">Licht &ndash; eind applaus</span></p>
+		<p class="c3"><span class="c0"></span></p>
+		<p class="c6"><span class="c0">Alle spelers/dansers en muzikanten op.</span></p>
+		<p class="c3"><span class="c7"></span></p>
+		<a id="t.461fa4e6b4040a8081e96491b5b08994589138f8"></a>
+		<a id="t.0"></a>
+		<table class="c34" onclick="toggleConfetti()">
+			<tbody>
+				<tr class="c40">
+					<td class="c17" colspan="1" rowspan="1">
+						<p class="c27 title"><span class="c38">Einde</span></p>
+					</td>
+				</tr>
+				<tr class="c31">
+					<td class="c17" colspan="1" rowspan="1">
+						<p class="c3 title"><span class="c38"></span></p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="c3"><span class="c7"></span></p>
+		<p class="c5 c27"><span class="c7"></span></p>
+	</div>
+
+
+	<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyAw3s_o7PxKheElgBplWnsKNlT5cSQE6uw",
+			authDomain: "lentefeestapp.firebaseapp.com",
+			databaseURL: "https://lentefeestapp.firebaseio.com/",
+			projectId: "lentefeestapp",
+			storageBucket: "lentefeestapp.appspot.com",
+			messagingSenderId: "73713534571",
+			appId: "1:73713534571:web:38cdea9d180c0afd97932e"
+		};
+		firebase.initializeApp(firebaseConfig);
+	</script>
+	<script src="./js/deps/confetti.min.js"></script>
+	<script src="./js/deps/materialize.min.js"></script>
+	<script src="./js/Scroller.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
