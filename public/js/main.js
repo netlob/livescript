@@ -1,14 +1,24 @@
 const Scroller = new Scroll(),
     database = firebase.database();
+var cache = [],
+    scriptLoaded = false;
 
 /**
  * @description This function is executed when a change occurs in the scroll reference of the database, and will execute the scroll function with the new indexxes of the selected lines.
  */
 database.ref('scroll').on('value', snapshot => {
-    if (snapshot.val()) Scroller.scroll(snapshot.val())
-    else Scroller.scroll([0]), M.toast({
+    if (snapshot.val() && scriptLoaded) {
+        Scroller.scroll(snapshot.val().sort((a, b) => {
+            return a - b
+        }))
+    } else if (snapshot.val()) {
+        cache = snapshot.val().sort((a, b) => {
+            return a - b
+        })
+    } else Scroller.scroll([0]), M.toast({
         html: "Geen huidige regel gevonden..."
     })
+    // if (snapshot.val()) Scroller.scroll(snapshot.val())
 });
 
 /**
@@ -39,26 +49,41 @@ firebase.auth().onAuthStateChanged((user) => {
  * @description This block of code is executed when jQuery is successfully initialized and will give every line a unique index, and will also handle the click events (on the lines and on the scrollspy) 
  */
 $(async () => {
-    if (localStorage.getItem("theme") == "dark") $("body").attr("theme", "dark")
-    if (location.hash == "#embed") $(".navbar-fixed").hide(), $("body").attr("embed", "true") //   These attributes are read by the CSS
-    if (location.hash == "#mobile" || $(window).width() < 900) $("body").attr("mobile", "true") // and will hide/show some elements
-    $(".c26").each(function (index) {
-        $(this).attr("id", `scene-${index}`)
-        if ($(this).text()) {
-            var text = $(this).text()
-            $(this).text(text.substring(0, text.indexOf(text.match(/\d+/))) + text.match(/\d+/)[0])
-            $("#scrollspy > ul").append(`<li index="${index}"><a>${$(this).text()}</a></li>`)
-        }
-    })
-    $("#scrollspy > ul > li").each(function () {
-        $(this).attr("value", $(this).text())
-        $(this).click(() => Scroller.scroll([$(`#scene-${$(this).attr("index")}`).parent().attr("id")], true))
-    })
-    $(".c24 p").each(function (index) {
-        $(this).attr("id", index)
-        if (!$(this).is(".title")) $(this).click(Scroller.scrollTo);
-    })
-    $(".fixed-action-btn").click(() => Scroller.scrollTop())
+    $("#overlay h4").text("Script inlezen...")
+    $.ajax({
+        "async": true,
+        "crossDomain": true,
+        "url": "https://docs.google.com/document/d/e/2PACX-1vQfHH9FAbiPUyZxpQPoc7knadjNtJXMh1AVjUYEbgs08hrynb7S1-_wLikOjb2uKg/pub?embedded=true",
+        "method": "GET"
+    }).done(function (response) {
+        $("#overlay").hide()
+        $("#script").html(response);
+        if (localStorage.getItem("theme") == "dark") $("body").attr("theme", "dark")
+        if (location.hash == "#embed") $(".navbar-fixed").hide(), $("body").attr("embed", "true") //   These attributes are read by the CSS
+        if (location.hash == "#mobile" || $(window).width() < 900) $("body").attr("mobile", "true") // and will hide/show some elements
+        // $(".c26").each(function (index) {
+        //     $(this).attr("id", `scene-${index}`)
+        //     if ($(this).text()) {
+        //         var text = $(this).text()
+        //         $(this).text(text.substring(0, text.indexOf(text.match(/\d+/))) + text.match(/\d+/)[0])
+        //         $("#scrollspy > ul").append(`<li index="${index}"><a>${$(this).text()}</a></li>`)
+        //     }
+        // })
+        // $("#scrollspy > ul > li").each(function () {
+        //     $(this).attr("value", $(this).text())
+        //     $(this).click(() => Scroller.scroll([$(`#scene-${$(this).attr("index")}`).parent().attr("id")], true))
+        // })
+        $("#script p").each(function (index) {
+            $(this).attr("id", index)
+            if (!$(this).is(".title")) $(this).click(function () {
+                Scroller.scrollTo(false, this)
+            });
+        })
+        $("#overlay h4").text("Positie bepalen...")
+        $(".fixed-action-btn").click(() => Scroller.scrollTop())
+        scriptLoaded = true
+        if (cache.length) Scroller.scroll(cache)
+    });
 })
 
 const

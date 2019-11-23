@@ -50,7 +50,7 @@ body[theme="dark"] .c15 {
 }
 
 body[theme="dark"],
-body[theme="dark"] .c24 {
+body[theme="dark"] #script {
     background-color: #202124 !important;
 }
 
@@ -73,7 +73,7 @@ body[embed="true"] {
     /* overflow: hidden !important; */
 }
 
-body[embed="true"] .c24 {
+body[embed="true"] #script {
     background-color: transparent !important;
     width: calc(100vw - 30px) !important;
     padding: 0 !important;
@@ -106,7 +106,7 @@ body[mobile="true"] {
     /* overflow: hidden !important; */
 }
 
-body[mobile="true"] .c24 {
+body[mobile="true"] #script {
     background-color: transparent !important;
     width: calc(100vw - 40px) !important;
     padding: 0 !important;
@@ -122,40 +122,33 @@ body[mobile="true"] .show-on-large {
 #overlay {
     position: fixed;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    /* background-color: rgba(0, 0, 0, 0.9); */
     z-index: 2;
     cursor: wait;
 }
 
+#overlay h4 {
+    position: absolute;
+    top: 45vh;
+    width: 100%;
+    text-align: center;
+}
+
 .progress {
     position: absolute;
-    /* height: 10px;
-    width: 100px; */
-    width: 50rem;
-    top: 50vh;
+    min-width: 20rem !important;
+    width: 30vw !important;
+    /* width: 50rem; */
+    top: 58vh;
     left: 50vw;
     transform: translate(-50%);
     height: 10px;
-    border-radius: 50px !important;
-}
-
-
-/* h1 {
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%);
-    font-size: 25px;
-    color: white;
-} */
-
-.indeterminate::before {
     border-radius: 50px !important;
 }
 
@@ -172,12 +165,13 @@ body[mobile="true"] .show-on-large {
     box-shadow: -5px 0px 0px 0px rgb(106, 27, 154);
 }
 
-body[loggedin="true"] .c24 p {
+body[loggedin="true"] #script p {
     cursor: pointer !important;
 }
 
-.c24 p {
+#script p {
     cursor: not-allowed;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
 }
 
 ol {
@@ -190,7 +184,15 @@ table th {
     padding: 0
 }
 
-.c17 {
+@media only screen and (min-width: 600px) {
+    #script {
+        width: 60rem !important;
+        margin-top: 10px;
+        margin-left: calc(50vw - 30rem);
+    }
+}
+
+/* .c17 {
     border-right-style: solid;
     padding: 5pt 5pt 5pt 5pt;
     border-bottom-color: transparent;
@@ -264,7 +266,6 @@ table th {
     text-decoration: none;
     vertical-align: baseline;
     font-size: 72pt;
-    /* font-family: "Calibri"; */
     font-style: normal
 }
 
@@ -279,7 +280,6 @@ table th {
 }
 
 .c2 {
-    /* background-color: #ffffff; */
     padding-top: 0pt;
     padding-bottom: 0pt;
     line-height: 1.0;
@@ -410,7 +410,6 @@ table th {
     .c24 {
         background-color: #ffffff;
         width: 60rem !important;
-        /* padding: 70.8pt 70.8pt 70.8pt 70.8pt; */
         margin-top: 10px;
         margin-left: calc(50vw - 30rem);
     }
@@ -473,7 +472,7 @@ table th {
 
 .c31 {
     height: 57pt
-}
+} */
 
 
 /* .c25 {
@@ -618,7 +617,7 @@ h6 {
         /* overflow: hidden !important; */
     }
 
-    body[embed="true"] .c24 {
+    body[embed="true"] #script {
         /* background-color: transparent !important; */
         width: calc(100vw - 30px) !important;
         padding: 0 !important;
