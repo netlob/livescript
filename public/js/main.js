@@ -61,23 +61,35 @@ $(async () => {
         if (localStorage.getItem("theme") == "dark") $("body").attr("theme", "dark")
         if (location.hash == "#embed") $(".navbar-fixed").hide(), $("body").attr("embed", "true") //   These attributes are read by the CSS
         if (location.hash == "#mobile" || $(window).width() < 900) $("body").attr("mobile", "true") // and will hide/show some elements
-        // $(".c26").each(function (index) {
+        // $("#script p > span").each(function (index) {
         //     $(this).attr("id", `scene-${index}`)
         //     if ($(this).text()) {
         //         var text = $(this).text()
-        //         $(this).text(text.substring(0, text.indexOf(text.match(/\d+/))) + text.match(/\d+/)[0])
+        //         console.log(text)
+        //         // $(this).text(text.substring(0, text.indexOf(text.match(/\d+/))) + text.match(/\d+/)[0])
         //         $("#scrollspy > ul").append(`<li index="${index}"><a>${$(this).text()}</a></li>`)
         //     }
         // })
-        // $("#scrollspy > ul > li").each(function () {
-        //     $(this).attr("value", $(this).text())
-        //     $(this).click(() => Scroller.scroll([$(`#scene-${$(this).attr("index")}`).parent().attr("id")], true))
-        // })
         $("#script p").each(function (index) {
             $(this).attr("id", index)
+            console.log($(this).first().css("text-decoration"))
+            if ($(this).first().css("text-decoration") == "underline") {
+                // $(this).attr("id", `scene-${index}`)
+                if ($(this).text()) {
+                    var text = $(this).text()
+                    console.log(text)
+                    $(this).text(text.substring(0, text.indexOf(text.match(/\d+/))) + text.match(/\d+/)[0])
+                    $("#scrollspy > ul").append(`<li index="${index}"><a>${$(this).text()}</a></li>`)
+                }
+                return
+            }
             if (!$(this).is(".title")) $(this).click(function () {
                 Scroller.scrollTo(false, this)
             });
+        })
+        $("#scrollspy > ul > li").each(function () {
+            $(this).attr("value", $(this).text())
+            $(this).click(() => Scroller.scroll([$(`#${$(this).attr("index")}`).parent().attr("id")], true))
         })
         $("#overlay h4").text("Positie bepalen...")
         $(".fixed-action-btn").click(() => Scroller.scrollTop())

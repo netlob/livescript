@@ -135,7 +135,7 @@ body[mobile="true"] .show-on-large {
 
 #overlay h4 {
     position: absolute;
-    top: 45vh;
+    top: calc(50vh - 3rem);
     width: 100%;
     text-align: center;
 }
@@ -144,8 +144,11 @@ body[mobile="true"] .show-on-large {
     position: absolute;
     min-width: 20rem !important;
     width: 30vw !important;
+    max-width: 40rem !important;
+    padding: 0;
+    margin: 0;
     /* width: 50rem; */
-    top: 58vh;
+    top: calc(50vh + 3rem);
     left: 50vw;
     transform: translate(-50%);
     height: 10px;
