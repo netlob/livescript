@@ -20,6 +20,22 @@
     text-transform: capitalize;
 }
 
+.fixed-type-selector {
+    position: fixed !important;
+    left: 23px !important;
+    bottom: 23px !important;
+    padding-top: 15px !important;
+    margin-bottom: 0 !important;
+    z-index: 997 !important;
+}
+
+.btn {
+    background-color: transparent !important;
+    border: 1px solid rgb(106, 27, 154) !important;
+    color: rgb(106, 27, 154) !important;
+    box-shadow: none !important;
+}
+
 .exclude,
 .exclude * {
     text-decoration: line-through !important;
@@ -38,7 +54,8 @@
 
 body[theme="dark"] .c8,
 body[theme="dark"] .c18,
-body[theme="dark"] .brand-logo {
+body[theme="dark"] .brand-logo,
+body[theme="dark"] .bold {
     color: #EEE !important;
 }
 
@@ -49,8 +66,8 @@ body[theme="dark"] .c15 {
     color: black !important;
 }
 
-body[theme="dark"],
-body[theme="dark"] #script {
+/*body[theme="dark"] #overlay,*/
+body[theme="dark"] {
     background-color: #202124 !important;
 }
 
@@ -59,10 +76,22 @@ body[theme="dark"] p {
     color: #a9a9a9 !important;
 }
 
+body[theme="dark"] .btn {
+    background-color: rgb(106, 27, 154) !important;
+    /* border: 1px solid rgb(106, 27, 154) !important; */
+    color: white !important;
+    /* box-shadow: none !important; */
+}
+
 * {
     user-select: none;
     transition: text 400ms;
     transition: background 400ms;
+}
+
+#script {
+    background-color: transparent !important;
+    margin-top: 56px !important;
 }
 
 body[embed="true"] {
@@ -128,7 +157,7 @@ body[mobile="true"] .show-on-large {
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: rgba(0, 0, 0, 0.9); */
+    background-color: #fff;
     z-index: 2;
     cursor: wait;
 }
@@ -195,300 +224,6 @@ table th {
     }
 }
 
-/* .c17 {
-    border-right-style: solid;
-    padding: 5pt 5pt 5pt 5pt;
-    border-bottom-color: transparent;
-    border-top-width: 1pt;
-    border-right-width: 1pt;
-    border-left-color: transparent;
-    vertical-align: top;
-    border-right-color: transparent;
-    border-left-width: 1pt;
-    border-top-style: solid;
-    border-left-style: solid;
-    border-bottom-width: 1pt;
-    width: 353.2pt;
-    border-top-color: transparent;
-    border-bottom-style: solid
-}
-
-.c0 {
-    color: #000000;
-    font-weight: 400;
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 11pt;
-    font-family: "Arial";
-    font-style: italic
-}
-
-.c3 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.0;
-    orphans: 2;
-    widows: 2;
-    text-align: left;
-    height: 11pt
-}
-
-.c7 {
-    color: #000000;
-    font-weight: 400;
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 11pt;
-    font-family: "Arial";
-    font-style: normal
-}
-
-.c39 {
-    -webkit-text-decoration-skip: none;
-    color: #000000;
-    text-decoration: underline;
-    vertical-align: baseline;
-    text-decoration-skip-ink: none;
-    font-size: 16pt;
-    font-style: normal
-}
-
-.c26 {
-    -webkit-text-decoration-skip: none;
-    color: #000000;
-    text-decoration: underline;
-    vertical-align: baseline;
-    text-decoration-skip-ink: none;
-    font-size: 11pt;
-    font-style: normal
-}
-
-.c38 {
-    color: #000000;
-    font-weight: 400;
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 72pt;
-    font-style: normal
-}
-
-.c8 {
-    color: #000000;
-    font-weight: 700;
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 11pt;
-    font-family: "Arial";
-    font-style: normal
-}
-
-.c2 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.0;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-.c6 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.0;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-.c35 {
-    padding-top: 0pt;
-    padding-bottom: 8pt;
-    line-height: 1.0791666666666666;
-    orphans: 2;
-    widows: 2;
-    text-align: center
-}
-
-.c22 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.1500000000000001;
-    orphans: 2;
-    widows: 2;
-    text-align: center
-}
-
-.c27 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.0;
-    orphans: 2;
-    widows: 2;
-    text-align: center
-}
-
-.c28 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.1500000000000001;
-    orphans: 2;
-    widows: 2;
-    text-align: justify
-}
-
-.c1 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.1500000000000001;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-.c4 {
-    padding-top: 0pt;
-    padding-bottom: 0pt;
-    line-height: 1.0;
-    orphans: 2;
-    widows: 2;
-    text-align: justify
-}
-
-.c10 {
-    padding-top: 0pt;
-    padding-bottom: 8pt;
-    line-height: 1.0791666666666666;
-    orphans: 2;
-    widows: 2;
-    text-align: left
-}
-
-.c16 {
-    color: #212121;
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 11pt;
-    font-style: normal
-}
-
-.c34 {
-    border-spacing: 0;
-    border-collapse: collapse;
-    margin-right: auto
-}
-
-.c20 {
-    color: #000000;
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 11pt
-}
-
-.c36 {
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 10pt;
-    font-style: normal
-}
-
-.c9 {
-    font-family: "Arial";
-    font-style: italic;
-    font-weight: 700
-}
-
-.c11 {
-    background-color: #ff00ff;
-    font-family: "Arial";
-    font-weight: 700
-}
-
-.c33 {
-    text-decoration: none;
-    vertical-align: baseline;
-    font-size: 11pt
-}
-
-@media only screen and (min-width: 600px) {
-    .c24 {
-        background-color: #ffffff;
-        width: 60rem !important;
-        margin-top: 10px;
-        margin-left: calc(50vw - 30rem);
-    }
-}
-
-.c12 {
-    font-weight: 400;
-    font-family: "Arial"
-}
-
-.c14 {
-    margin-left: 35.4pt;
-    text-indent: -35.4pt
-}
-
-.c37 {
-    margin-left: 106.3pt;
-    text-indent: -106.3pt
-}
-
-.c30 {
-    margin-left: 35.4pt;
-    text-indent: 35.4pt
-}
-
-.c18 {
-    font-weight: 700;
-    font-family: "Arial"
-}
-
-.c21 {
-    margin-left: 70.8pt;
-    text-indent: -70.8pt
-}
-
-.c23 {
-    margin-left: 106pt;
-    text-indent: -106pt
-}
-
-.c5 {
-    height: 11pt
-}
-
-.c40 {
-    height: 0pt
-}
-
-.c15 {
-    background-color: #ff00ff
-}
-
-.c29 {
-    background-color: #ff0000
-}
-
-.c19 {
-    background-color: #ffff00
-}
-
-.c31 {
-    height: 57pt
-} */
-
-
-/* .c25 {
-    background-color: #ffffff
-} */
-
-.c13 {
-    font-style: italic
-}
-
-.c32 {
-    color: #212121
-}
 
 .title {
     padding-top: 0pt;

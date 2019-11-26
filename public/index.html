@@ -21,12 +21,9 @@
 				</span>
 				<a class="brand-logo center">Live Script</a>
 				<ul id="nav-mobile" class="right">
+					<li><a onclick="toggleTheme()"><i class="material-icons white-text">lightbulb_outline</i></a></li>
 					<li class="show-on-medium-and-up"><a onclick="login()"><i
 								class="material-icons white-text">account_circle</i></a></li>
-					<li><a onclick="toggleTheme()"><i class="material-icons white-text">lightbulb_outline</i></a></li>
-					<!-- <li class="show-on-large"><a href="../music"><i class="material-icons white-text">music_note</i></a> -->
-					</li>
-					<!-- <li class="show-on-large"><a href="../"><i class="material-icons white-text">tv</i></a></li> -->
 				</ul>
 			</div>
 		</nav>
@@ -39,6 +36,18 @@
 		<a class="btn-floating btn-large purple darken-4">
 			<i class="large material-icons">arrow_upward</i>
 		</a>
+	</div>
+	<div class="fixed-type-selector">
+		<a class='dropdown-trigger btn waves-effect' href='#' data-target='dropdown1'>Type</a>
+
+		<!-- Dropdown Structure -->
+		<ul id='dropdown1' class='dropdown-content'>
+			<li class="divider" tabindex="-1">Geen</li>
+			<li><a href="">Decor</a></li>
+			<li><a href="">Geluid</a></li>
+			<li><a href="">Licht</a></li>
+			<li><a href="">Coulise</a></li>
+		</ul>
 	</div>
 
 	<div id="overlay">

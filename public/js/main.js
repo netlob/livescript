@@ -11,6 +11,7 @@ database.ref('scroll').on('value', snapshot => {
         Scroller.scroll(snapshot.val().sort((a, b) => {
             return a - b
         }))
+        $("#overlay").hide()
     } else if (snapshot.val()) {
         cache = snapshot.val().sort((a, b) => {
             return a - b
@@ -49,14 +50,16 @@ firebase.auth().onAuthStateChanged((user) => {
  * @description This block of code is executed when jQuery is successfully initialized and will give every line a unique index, and will also handle the click events (on the lines and on the scrollspy) 
  */
 $(async () => {
+    // $('.dropdown-trigger').dropdown();
     $("#overlay h4").text("Script inlezen...")
     $.ajax({
         "async": true,
         "crossDomain": true,
-        "url": "https://docs.google.com/document/d/e/2PACX-1vQfHH9FAbiPUyZxpQPoc7knadjNtJXMh1AVjUYEbgs08hrynb7S1-_wLikOjb2uKg/pub?embedded=true",
+        "url": "https://docs.google.com/document/d/e/2PACX-1vR7aUYBBloQVrz25_jg7NtOv8XgAyfhaJ7psswUDa9HZBumq--eBIeyACzFzeEcdvRB1N3nFDUQIcdm/pub?embedded=true",
         "method": "GET"
     }).done(function (response) {
-        $("#overlay").hide()
+        response = response.replace(response.substring(response.indexOf("li{"), response.indexOf("</style>")), "")
+        $("#overlay h4").text("Script inlezen...")
         $("#script").html(response);
         if (localStorage.getItem("theme") == "dark") $("body").attr("theme", "dark")
         if (location.hash == "#embed") $(".navbar-fixed").hide(), $("body").attr("embed", "true") //   These attributes are read by the CSS
@@ -70,31 +73,34 @@ $(async () => {
         //         $("#scrollspy > ul").append(`<li index="${index}"><a>${$(this).text()}</a></li>`)
         //     }
         // })
-        $("#script p").each(function (index) {
+        $("#script *").each(function (index) {
             $(this).attr("id", index)
-            console.log($(this).first().css("text-decoration"))
-            if ($(this).first().css("text-decoration") == "underline") {
-                // $(this).attr("id", `scene-${index}`)
-                if ($(this).text()) {
-                    var text = $(this).text()
-                    console.log(text)
-                    $(this).text(text.substring(0, text.indexOf(text.match(/\d+/))) + text.match(/\d+/)[0])
-                    $("#scrollspy > ul").append(`<li index="${index}"><a>${$(this).text()}</a></li>`)
+            $(this).find("*").each(function () {
+                if ($(this).css("font-weight") == 700) {
+                    $(this).addClass("bold")
                 }
-                return
-            }
+                if ($(this).css("text-decoration").indexOf("underline") > -1) {
+                    if ($(this).text()) {
+                        var text = $(this).text()
+                        $(this).addClass("scene")
+                        $(this).text(text.substring(0, text.indexOf(text.match(/\d+/))) + text.match(/\d+/)[0])
+                        $("#scrollspy > ul").append(`<li index="${index}"><a>${$(this).text()}</a></li>`)
+                        return
+                    }
+                }
+            })
             if (!$(this).is(".title")) $(this).click(function () {
                 Scroller.scrollTo(false, this)
             });
         })
         $("#scrollspy > ul > li").each(function () {
             $(this).attr("value", $(this).text())
-            $(this).click(() => Scroller.scroll([$(`#${$(this).attr("index")}`).parent().attr("id")], true))
+            $(this).click(() => Scroller.scroll([$(`#${$(this).attr("index")}`).attr("id")], true))
         })
         $("#overlay h4").text("Positie bepalen...")
         $(".fixed-action-btn").click(() => Scroller.scrollTop())
         scriptLoaded = true
-        if (cache.length) Scroller.scroll(cache)
+        if (cache.length) Scroller.scroll(cache), $("#overlay").hide()
     });
 })
 

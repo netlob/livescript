@@ -4,7 +4,7 @@
  */
 class Scroll {
     /**
-     * @description Contains some handy variabled :)
+     * @description Contains some handy variables :)
      */
     constructor() {
         this.scrolled = 0
@@ -76,15 +76,16 @@ class Scroll {
     /**
      * @description This function is executed by the scroll function and moves the purple bar to the current selected lines.
      */
-    assignSelector = function () {
+    assignSelector = async () => {
         if (!this.elems || !this.elems.length) return
         if (location.hash == "#mobile" || $(window).width() < 900) $("body").attr("mobile", "true")
         else $("body").attr("mobile", "false")
+        console.log($(`#${max(this.elems)}`).offset().top)
         var height = 0
         this.elems.forEach(elem => height += $(`#${elem}`).height())
         // $(".indicator").css("top", ($(`#${max(this.elems)}`).offset().top - height))
         $(".indicator").css("top", ($(`#${max(this.elems)}`).offset().top - height) + $(`#${max(this.elems)}`).height())
-        $(".indicator").css("left", ($(`#0`).offset().left - 20))
+        $(".indicator").css("left", ($(`#${max(this.elems)}`).offset().left - 20))
         $(".indicator").css("height", height)
     }
 
@@ -96,6 +97,7 @@ class Scroll {
             e.preventDefault();
             for (var id = parseInt(min(this.elems)) - 1; id < parseInt(min(this.elems)) + 100; id--) {
                 if ($(`#${id}`).text()) {
+                    console.log(`#${id}`)
                     $(`#${id}`).click()
                     break
                 }
@@ -104,6 +106,7 @@ class Scroll {
             e.preventDefault();
             for (var id = parseInt(max(this.elems)) + 1; id < parseInt(max(this.elems)) + 100; id++) {
                 if ($(`#${id}`).text()) {
+                    console.log(`#${id}`)
                     $(`#${id}`).click()
                     break
                 }
@@ -122,7 +125,7 @@ class Scroll {
         var elScrolledBy = [],
             currentSceneText = 'scene 1'
 
-        $(".c26").each(function () {
+        $(".scene").each(function () {
             if ($(this).text() != "") {
                 if (window.scrollY + ($(window).height() / 2) > ($(this).offset().top + $(this).height()))
                     elScrolledBy.push($(this))

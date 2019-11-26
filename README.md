@@ -1,23 +1,43 @@
-# main.js
+# Documentation
+<dl>
+I documented this whole f*cking project, and I think its clear what each function does. There're even more comments and descriptions in the code itself so everything should be self explanatory :)
 
-## Functions
+## Inserting a script
+W.I.P.
+
+## Using the software
+### Not logged in
+If you're not logged in to the superuser account, there is no way to interact with the script (only UI options like darkmode are available). The script will automatically scroll to the current position which is provided by the superuser.
+The user will still be able to scroll freely thru the script
+### Superuser
+When logged in with the superuser account the user will be able to click (or use the arrowkeys) on any piece of the script. This will give that specific position to the database which will up
+
+</dl>
+
+
+## File: main.js
+
+### Functions
 
   
 
 <dl>
 
+<a  name="login"></a>
 <dt><a  href="#login">login()</a></dt>
 
 <dd><p>This function will prompt a password and tries to login with that given password into the superuser account on the firebase authentication server.</p>
 
 </dd>
 
+<a  name="toggleConfetti"></a>
 <dt><a  href="#toggleConfetti">toggleConfetti()</a></dt>
 
 <dd><p>This function is executed when the user clicks on &quot;Einde&quot;. It will toggle the confetti boolean on in the database.</p>
 
 </dd>
 
+<a  name="toggleTheme"></a>
 <dt><a  href="#toggleTheme">toggleTheme()</a></dt>
 
 <dd><p>This function is executed when the user clicks on the lightbulb in the navbar and toggles dark mode by giving the body tag a attribute called theme. The CSS will recogize the <code>theme=&quot;dark&quot;</code> and will change styles to dark.</p>
@@ -30,7 +50,7 @@
   
   
 
-# Scroller.js
+## Scroller.js
 <dd><p>This class handles all the scolling to - and algoritms to scroll to - any highlighted piece of script, saved in the database</p>
 
 
@@ -47,7 +67,6 @@ This class handles all the scolling to - and algoritms to scroll to - any highli
 
 **Kind**: global class
 
-*  [new Scroll()](#new_Scroll_new)
 
 *  [.scroll](#Scroll+scroll)
 
@@ -61,16 +80,12 @@ This class handles all the scolling to - and algoritms to scroll to - any highli
 
 *  [.scrollTo](#Scroll+scrollTo)
 
-  
-
-<a  name="new_Scroll_new"></a>
-
 
   
 
 
   
-## Functions
+### Functions
 <a  name="Scroll+scroll"></a>
 
 <dt><a  href="#Scroll+scroll">scroll.scroll()</a></dt>
